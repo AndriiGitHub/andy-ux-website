@@ -37,8 +37,8 @@
     "extends": "google"
   },
   "dependencies": {
-    "bootstrap": "^4.0.0",
-    "jquery": "^3.3.1",
-    "popper.js": "^1.12.9"
+    "bower": "^1.8.2",
+    "popper.js": "^1.12.9",
+    "swiper": "^4.1.0"
   }
 }

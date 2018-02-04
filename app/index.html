@@ -5,27 +5,443 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="styles/bootstrap.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.1.0/css/swiper.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.1.0/css/swiper.min.css">
+    <link rel="stylesheet" href="styles/main.css">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,800,900" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <title></title>
   </head>
   <body>
-    <!-- Add your site or app content here -->
+    <div class="logo-block">
+      <div class="container">
+        <div class="row">
+          <div class="col p-0">
+            <nav class="navbar navbar-expand-sm">
 
-    <div class="container">
-      <div class="row">
-        <div class="col-xs-12">
+              <img class="navbar-brand" src="./images/logo.svg" alt="logo">
+              <button class="navbar-toggler" type="button" data-toggle="collapse"
+                      data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                      aria-expanded="false" aria-label="Toggle navigation">
+                <i class="material-icons burger">&#xE5D2;</i>
+              </button>
 
+              <div class="collapse navbar-collapse d-flex flex-row-reverse" id="navbarSupportedContent">
+                <ul class="nav">
+                  <li class="nav-item">
+                    <span class="nav-link" href="#">About</span>
+                  </li>
+                  <li class="nav-item">
+                    <span class="nav-link" href="#">Works</span>
+                  </li>
+                  <li class="nav-item">
+                    <span class="nav-link" href="#">Clients</span>
+                  </li>
+                  <li class="nav-item">
+                    <span class="nav-link pr-0" href="#">Contact</span>
+                  </li>
+                </ul>
+              </div>
+
+            </nav>
+          </div>
+        </div>
+        <div class="row logo-text">
+          <div class="col">
+            Improve <br />design of your interface
+          </div>
+        </div>
+        <div class="row btn-row">
+          <div class="col">
+            <button class="button">Let's talk</button>
+          </div>
         </div>
       </div>
     </div>
-
+    <div class="about-us-block">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="background">
+            <span class="bg-text">About Us</span>
+          </div>
+          <div class="col-md-7 col-lg-7 about-us">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer justo velit, tincidunt non massa quis, euismod maximus tortor. In semper consequat augue.
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="services-block">
+      <div class="container">
+        <div class="row">
+          <div class="col services-block-text">
+            We provide great services
+          </div>
+        </div>
+        <div class="row">
+          <span class="col-md-5 offset-md-1 col-lg-3 services-item">
+            <div class="row">
+              <span class="col">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 70 70">
+                  <title>Research</title>
+                  <g id="Layer_2" data-name="Layer 2"><g id="Layer_1-2" data-name="Layer 1">
+                    <path d="M63.43,21.45a3.38,3.38,0,1,0,0-2.26H40.59A20.27,20.27,0,0,0,37,8.67l.6-.28a3.36,3.36,0,0,0,4.28-.28L48.59,12a3.38,3.38,0,1,0,6.73.45,3.26,3.26,0,0,0-.16-1l9.58-5.22a3.43,3.43,0,0,0,1.87.56,3.39,3.39,0,1,0-3.38-3.38,3.19,3.19,0,0,0,.16,1L53.81,9.6a3.36,3.36,0,0,0-4.19.36L42.86,6.09a3.13,3.13,0,0,0,0-.44,3.39,3.39,0,1,0-6.65.85l-.76.35A20.3,20.3,0,1,0,15.81,40.12V44H11.29v2.26h2.26V63.23a6.78,6.78,0,0,0,13.55,0V46.29h2.25V44H24.84V40.12a20.36,20.36,0,0,0,12.81-9.23,3.36,3.36,0,0,0,5.39.85l7.8,2.93c0,.11,0,.22,0,.33a3.39,3.39,0,1,0,6.77,0s0-.1,0-.15l6.57-.94a3.37,3.37,0,1,0-.91-2.3c0,.05,0,.1,0,.15l-6.58.94a3.37,3.37,0,0,0-2.47-1.09,3.43,3.43,0,0,0-2.4,1L44,29.69c0-.11,0-.22,0-.34A3.39,3.39,0,0,0,40.65,26a3.35,3.35,0,0,0-.85.12,20.29,20.29,0,0,0,.79-4.64Zm3.18-2.26a1.13,1.13,0,1,1-1.13,1.13A1.13,1.13,0,0,1,66.61,19.19Zm0-16.93a1.13,1.13,0,0,1,0,2.26,1.13,1.13,0,1,1,0-2.26Zm-14.67,9a1.13,1.13,0,1,1-1.13,1.13A1.13,1.13,0,0,1,51.94,11.29ZM39.52,4.52a1.13,1.13,0,1,1-1.13,1.13A1.13,1.13,0,0,1,39.52,4.52Zm27.09,26a1.13,1.13,0,1,1-1.13,1.13A1.13,1.13,0,0,1,66.61,30.48ZM54.19,33.87A1.13,1.13,0,1,1,53.06,35,1.13,1.13,0,0,1,54.19,33.87ZM24.84,63.23a4.52,4.52,0,0,1-9,0V46.29h9ZM18.06,44V40.51a21.25,21.25,0,0,0,2.26.14,20.93,20.93,0,0,0,2.26-.14V44Zm2.26-5.64a18.07,18.07,0,1,1,13-30.56L30,9.34A14.67,14.67,0,1,0,32,29.22l3.61.73A18.05,18.05,0,0,1,20.32,38.39ZM18.06,16.94a3.39,3.39,0,1,0,3.18,4.51H32.69A12.37,12.37,0,0,1,31,26.72l-2.88-.58A3.35,3.35,0,1,0,28,28.42l1.49.3a12.43,12.43,0,1,1-1.72-18.34l-.93.42a3.33,3.33,0,0,0-2-.64,3.39,3.39,0,1,0,3.39,3.39,3.51,3.51,0,0,0-.13-.86L29.54,12a12.27,12.27,0,0,1,3.14,7.16H21.24A3.37,3.37,0,0,0,18.06,16.94Zm1.13,3.38a1.13,1.13,0,1,1-1.13-1.13A1.12,1.12,0,0,1,19.19,20.32ZM26,27.1A1.13,1.13,0,1,1,24.84,26,1.14,1.14,0,0,1,26,27.1Zm0-13.55a1.13,1.13,0,1,1-1.13-1.13A1.14,1.14,0,0,1,26,13.55ZM36.71,27.87l-3.42-.69a14.41,14.41,0,0,0,1.65-5.73h3.39A17.77,17.77,0,0,1,36.71,27.87Zm-1.77-8.68a14.54,14.54,0,0,0-3.25-8.13l3.16-1.44a18,18,0,0,1,3.48,9.57Zm5.71,9a1.13,1.13,0,1,1-1.13,1.12A1.12,1.12,0,0,1,40.65,28.23Z"/>
+                  </g></g>
+                </svg>
+              </span>
+            </div>
+            <div class="row services-title">
+              <div class="col">
+                Research
+              </div>
+            </div>
+            <div class="row services-info">
+              <div class="col">
+                Take a look at all the requirements, and list out the questions that is still in doubt.
+              </div>
+            </div>
+          </span>
+          <span class="col-md-5 col-lg-3 services-item">
+            <div class="row">
+              <div class="col">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 70 70">
+                  <title>Analysis</title>
+                  <g id="Layer_2" data-name="Layer 2">
+                    <g id="Layer_1-2" data-name="Layer 1">
+                      <path d="M51.94,23.71a4.52,4.52,0,0,0,4.51-4.52,4.47,4.47,0,0,0-.67-2.34l7.49-8.42a4.45,4.45,0,0,0,2.21.6A4.52,4.52,0,1,0,61,4.52a4.47,4.47,0,0,0,.67,2.34l-7.49,8.42a4.46,4.46,0,0,0-6,1.53l-4.17-.93a7.88,7.88,0,0,0,.09-1.2,9,9,0,0,0-17.39-3.4l-3-.66a4.5,4.5,0,0,0-9,.67,4.91,4.91,0,0,0,.12,1l-7,3.86a4.5,4.5,0,1,0,1.18,3,4.91,4.91,0,0,0-.12-1l7-3.86a4.48,4.48,0,0,0,7.55-1.43l2.65.59A8.11,8.11,0,0,0,26,14.68a9,9,0,0,0,17.39,3.39l4.08.91c0,.07,0,.14,0,.21A4.52,4.52,0,0,0,51.94,23.71ZM65.48,2.26a2.26,2.26,0,1,1-2.25,2.26A2.26,2.26,0,0,1,65.48,2.26ZM51.94,16.94a2.26,2.26,0,1,1-2.26,2.25A2.25,2.25,0,0,1,51.94,16.94ZM4.52,21.45a2.26,2.26,0,1,1,2.25-2.26A2.26,2.26,0,0,1,4.52,21.45Zm16.72-9.23a2.24,2.24,0,1,1,.21-.93ZM35,21.45a6.78,6.78,0,0,1-6.77-6.77q0-.36,0-.72l2.25.5a1.46,1.46,0,0,0,0,.22,4.51,4.51,0,0,0,8.34,2.38l2.3.51A6.78,6.78,0,0,1,35,21.45Zm-2.26-6.77A2.26,2.26,0,1,1,35,16.94,2.26,2.26,0,0,1,32.74,14.68Zm9,.71-2.25-.49a1.92,1.92,0,0,0,0-.22,4.51,4.51,0,0,0-8.34-2.38l-2.3-.52a6.77,6.77,0,0,1,12.89,2.9C41.77,14.92,41.76,15.16,41.74,15.39Z"/><path d="M19.19,31.61V45.16a4.53,4.53,0,0,0,4.52,4.52A4.46,4.46,0,0,0,26,49.05V70H44v-21a4.46,4.46,0,0,0,2.26.63,4.53,4.53,0,0,0,4.52-4.52V31.61a7.92,7.92,0,0,0-7.91-7.9H27.1A7.92,7.92,0,0,0,19.19,31.61ZM33.87,67.74H28.23V65.48h5.64Zm7.9,0H36.13V65.48h5.64Zm0-4.51H36.13V49.68H33.87V63.23H28.23V46.29H41.77ZM42.9,26a5.65,5.65,0,0,1,5.65,5.64V45.16a2.26,2.26,0,0,1-4.52,0V31.61H41.77V44H28.23V31.61H26V45.16a2.26,2.26,0,0,1-4.52,0V31.61A5.65,5.65,0,0,1,27.1,26Z"/><path d="M62.1,24.84a7.89,7.89,0,0,0-3.39,15v8.68a3.39,3.39,0,1,0,6.77,0V39.87a7.89,7.89,0,0,0-3.38-15Zm1.13,23.71a1.13,1.13,0,0,1-2.26,0v-8a7,7,0,0,0,1.13.1,7.08,7.08,0,0,0,1.13-.1ZM62.1,38.39a5.65,5.65,0,1,1,5.64-5.65A5.66,5.66,0,0,1,62.1,38.39Z"/>
+                      <rect x="60.97" y="54.19" width="2.26" height="2.26"/>
+                      <rect x="60.97" y="58.71" width="2.26" height="2.26"/>
+                      <rect x="60.97" y="63.23" width="2.26" height="2.26"/>
+                      <rect x="60.97" y="67.74" width="2.26" height="2.26"/>
+                      <path d="M11.48,29.35a4.27,4.27,0,0,0-3.05,1.27l-.53.53-.52-.53A4.32,4.32,0,0,0,0,33.68a4.27,4.27,0,0,0,1.27,3L7.9,43.37l6.64-6.64a4.27,4.27,0,0,0,1.27-3A4.33,4.33,0,0,0,11.48,29.35Zm1.46,5.79-5,5-5-5a2.11,2.11,0,0,1-.6-1.46,2.07,2.07,0,0,1,2.06-2.07,2,2,0,0,1,1.46.61L7.9,34.34,10,32.22a2.06,2.06,0,1,1,2.92,2.92Z"/>
+                      <rect x="6.77" y="49.68" width="2.26" height="2.26"/>
+                      <rect x="6.77" y="45.16" width="2.26" height="2.26"/>
+                      <rect x="6.77" y="54.19" width="2.26" height="2.26"/>
+                      <rect x="6.77" y="58.71" width="2.26" height="2.26"/>
+                      <rect x="6.77" y="63.23" width="2.26" height="2.26"/>
+                      <rect x="6.77" y="67.74" width="2.26" height="2.26"/>
+                    </g>
+                  </g>
+                </svg>
+              </div>
+            </div>
+            <div class="row services-title">
+              <div class="col">
+                Analysis
+              </div>
+            </div>
+            <div class="row services-info">
+              <div class="col">
+                Focus on the goals. Build User Persona, Create User Stories, Scenario Map, Sitemap
+              </div>
+            </div>
+          </span>
+          <span class="col-md-5 offset-md-1 col-lg-3 services-item">
+            <div class="row">
+              <div class="col">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 70 70">
+                  <title>Design</title>
+                  <g id="Layer_2" data-name="Layer 2">
+                    <g id="Layer_1-2" data-name="Layer 1">
+                      <path d="M7.9,62.1H22.43L7.9,48.42Zm2.26-8.45,6.58,6.19H10.16Z"/>
+                      <path d="M70,6.77V0H63.23V2.26H40.65V0H33.87V6.77h6.78V4.52h3.81a13.54,13.54,0,0,0-6.07,11.29H6.77a3.39,3.39,0,0,0-3.38,3.38V33.34a2.11,2.11,0,0,0-2.23-.52A2.15,2.15,0,0,0,0,35V66.61A3.39,3.39,0,0,0,3.39,70H37.26c1.48,0,2-.73,2.16-1.17a2.07,2.07,0,0,0-.77-2.33l-1.08-1h29A3.39,3.39,0,0,0,70,62.1V19.19a3.39,3.39,0,0,0-3.39-3.38H65.48A13.52,13.52,0,0,0,59.41,4.52h3.82V6.77ZM65.48,2.26h2.26V4.52H65.48ZM38.39,4.52H36.13V2.26h2.26ZM5.65,19.19a1.13,1.13,0,0,1,1.12-1.13H38.58a0,0,0,0,0,0,0,13.45,13.45,0,0,0,3.27,6.76H5.65V19.19ZM3.39,67.74h0a1.13,1.13,0,0,1-1.13-1.13V65.48H4.52V63.23H2.26V61H4.52V58.71H2.26V56.45H4.52V54.19H2.26V51.93H4.52V49.68H2.26V47.42H4.52V45.16H2.26V42.9H4.52V40.64H2.26V35.35L14.07,46.47l3.41,3.21L36.67,67.74Zm6.77-28V31.61H35V47.42H18.37ZM67.74,62.1a1.14,1.14,0,0,1-1.13,1.13H35.17L20.77,49.68H37.26V29.35H7.9v8.22L5.65,35.44V27.1H44.51c.22.14.42.3.65.43V28.8A2.83,2.83,0,0,0,44,31.05a2.78,2.78,0,0,0,.58,1.69,2.79,2.79,0,0,0-.58,1.7,2.83,2.83,0,0,0,2.82,2.82H57a2.83,2.83,0,0,0,2.82-2.82,2.79,2.79,0,0,0-.58-1.7,2.76,2.76,0,0,0,.58-1.69,2.83,2.83,0,0,0-1.13-2.25V27.53c.23-.13.43-.29.65-.43h8.38ZM46.85,33.87H57A.57.57,0,0,1,57,35H46.85a.57.57,0,0,1,0-1.13Zm-.56-2.82a.57.57,0,0,1,.56-.57H57a.57.57,0,0,1,.56.57.56.56,0,0,1-.56.56H46.85A.56.56,0,0,1,46.29,31.05Zm19-13h1.32a1.14,1.14,0,0,1,1.13,1.13v5.65H62a13.47,13.47,0,0,0,3.24-6.6A.78.78,0,0,0,65.29,18.06Zm-2.06-2.25a11.23,11.23,0,0,1-6.16,10l-.62.32v2.06H53.06V20.16a4.52,4.52,0,1,0-2.25,0v8.07H47.42V26.17l-.61-.32a11.28,11.28,0,1,1,16.42-10ZM51.94,18.06a2.26,2.26,0,1,1,2.25-2.25A2.26,2.26,0,0,1,51.94,18.06Z"/>
+                    </g>
+                  </g>
+                </svg>
+              </div>
+            </div>
+            <div class="row services-title">
+              <div class="col">
+                Design
+              </div>
+            </div>
+            <div class="row services-info">
+              <div class="col">
+                  Creating Wireframes. UI, visual design and create a UI style guide.
+              </div>
+            </div>
+          </span>
+          <span class="col-md-5 col-lg-3 services-item">
+            <div class="row">
+              <div class="col">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 54.51 70">
+                  <title>Validate designs</title>
+                  <g id="Layer_2" data-name="Layer 2">
+                    <g id="Layer_1-2" data-name="Layer 1">
+                      <path d="M8.42,43.48A6.6,6.6,0,1,0,15,50.07,6.6,6.6,0,0,0,8.42,43.48Zm0,11a4.42,4.42,0,1,1,4.42-4.42A4.42,4.42,0,0,1,8.42,54.49Z"/>
+                      <path d="M8.13,56.94A8.13,8.13,0,0,0,0,65.06v3.85A1.09,1.09,0,0,0,1.09,70h14a1.09,1.09,0,0,0,1.09-1.06l.08-3.85v0A8.13,8.13,0,0,0,8.13,56.94ZM14,67.83H2.17V65.06a6,6,0,0,1,11.91,0Z"/>
+                      <path d="M46.1,43.48a6.6,6.6,0,1,0,6.59,6.59A6.6,6.6,0,0,0,46.1,43.48Zm0,11a4.42,4.42,0,1,1,4.42-4.42A4.42,4.42,0,0,1,46.1,54.49Z"/>
+                      <path d="M46.39,56.94a8.13,8.13,0,0,0-8.13,8.12v0l.08,3.85A1.09,1.09,0,0,0,39.43,70h14a1.08,1.08,0,0,0,1.08-1.09V65.06A8.13,8.13,0,0,0,46.39,56.94Zm-5.9,10.89-.06-2.78a6,6,0,0,1,11.91,0v2.77Z"/>
+                      <path d="M27.46,43.48a6.6,6.6,0,1,0,6.6,6.59A6.6,6.6,0,0,0,27.46,43.48Zm0,11a4.42,4.42,0,1,1,4.42-4.42A4.43,4.43,0,0,1,27.46,54.49Z"/>
+                      <path d="M27.17,56.94a8.13,8.13,0,0,0-8.12,8.12v3.85A1.09,1.09,0,0,0,20.14,70h14a1.09,1.09,0,0,0,1.09-1.06l.08-3.85v0A8.13,8.13,0,0,0,27.17,56.94Zm5.9,10.89H21.22V65.06a6,6,0,0,1,11.91,0Z"/>
+                      <path d="M35.48,11.35A7.94,7.94,0,0,0,35.15,10a1.09,1.09,0,0,0-2.06.7,6.71,6.71,0,0,1,.25,1,1.08,1.08,0,0,0,1.07.92l.17,0A1.07,1.07,0,0,0,35.48,11.35Z"/>
+                      <path d="M33.65,7.35a8.29,8.29,0,0,0-6.39-3,1.09,1.09,0,1,0,0,2.17A6.17,6.17,0,0,1,32,8.74a1.06,1.06,0,0,0,.83.39,1.09,1.09,0,0,0,.7-.25A1.08,1.08,0,0,0,33.65,7.35Z"/>
+                      <path d="M45.23,36.52H28.34v-3h3.55A1.09,1.09,0,0,0,33,32.39V24.28A1.18,1.18,0,0,0,33,24a12.69,12.69,0,1,0-11.38,0,.8.8,0,0,0,0,.27v8.11a1.09,1.09,0,0,0,1.09,1.09h3.55v3h-18A1.09,1.09,0,0,0,7,37.61v2.9a1.09,1.09,0,0,0,2.17,0V38.7h17v1.81a1.09,1.09,0,0,0,2.17,0V38.7h15.8v1.81a1.09,1.09,0,0,0,2.17,0v-2.9A1.08,1.08,0,0,0,45.23,36.52ZM30.81,27.25h-7.1V25.36h7.1ZM25.44,23v-8.1h3.63V23a10.37,10.37,0,0,1-3.63,0ZM23.27,12.1v.65H22a1.09,1.09,0,1,0,0,2.18h1.23V22.4a10.51,10.51,0,1,1,8,0V14.93h1.23a1.09,1.09,0,1,0,0-2.18H31.24V12.1a1.09,1.09,0,1,0-2.17,0v.65H25.44V12.1a1.09,1.09,0,1,0-2.17,0Zm4,19.2H23.71V29.42h7.1V31.3Z"/>
+                      <path d="M9.76,8.13H5.25a1.09,1.09,0,0,0,0,2.17H9.76a1.09,1.09,0,1,0,0-2.17Z"/>
+                      <path d="M11.79,12.13a1.1,1.1,0,0,0-1.54,0L7.38,15a1.09,1.09,0,1,0,1.54,1.54l2.87-2.87A1.1,1.1,0,0,0,11.79,12.13Z"/>
+                      <path d="M11.76,4.76,8.89,1.89A1.09,1.09,0,0,0,7.35,3.42l2.87,2.87a1.09,1.09,0,1,0,1.54-1.53Z"/>
+                      <path d="M50.42,8.13H45.91a1.09,1.09,0,1,0,0,2.17h4.51a1.09,1.09,0,1,0,0-2.17Z"/>
+                      <path d="M48.29,15l-2.87-2.87a1.09,1.09,0,0,0-1.54,1.54l2.87,2.87A1.09,1.09,0,0,0,48.29,15Z"/>
+                      <path d="M48.32,1.89a1.08,1.08,0,0,0-1.54,0L43.91,4.76a1.09,1.09,0,0,0,1.54,1.53l2.87-2.87A1.09,1.09,0,0,0,48.32,1.89Z"/>
+                    </g>
+                  </g>
+                </svg>
+              </div>
+            </div>
+            <div class="row services-title">
+              <div class="col">
+                Validate designs
+             </div>
+            </div>
+            <div class="row services-info">
+              <div class="col">
+                  Analyze how users use the product. Can they get the goal that customer want them to?
+              </div>
+            </div>
+          </span>
+        </div>
+      </div>
+    </div>
+    <div class="our-work-block">
+      <div class="container">
+        <div class="row" style="margin: 0">
+          <div class="row mx-auto logo-text">
+            <span class="col our-works">Our Works</span>
+          </div>
+          <div class="row our-work-content">
+            <div class="col-6">
+              <h4>AquaPoint</h4>
+              <p>
+                Consectetur adipiscing elit. Integer justo velit, tincidunt non massa quis, euismod maximus tortor.
+                Praesent semper quis purus ut molestie. Pellentesque venenatis urna vel enim bibendum, vitae varius
+                urna gravida. In semper <consequa></consequa>t augue orci.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="row eye-row" style="margin: 0">
+          <div class="col pl-0">
+            <button class="button" id="button">
+              <span class="open-eye">
+                <svg viewBox="0 0 297 193.47"><defs><style>.cls-1{fill:#fff;}</style></defs><title>open-eye</title><g id="Layer_2" data-name="Layer 2"><g id="Capa_1" data-name="Capa 1"><path class="cls-1" d="M295.66,108.89a10.63,10.63,0,0,0-.75-1.18c-.14-.18-1.1-1.45-2.84-3.51l0,0-.63-.74-.14-.16-.57-.67-.22-.24c-.18-.22-.37-.43-.57-.66l-.26-.29-.61-.68-.27-.31-.7-.78-.24-.26-1-1.06,0,0-1.08-1.15-.27-.29-.85-.89-.41-.43c-.26-.27-.52-.53-.78-.81s-.32-.31-.47-.47l-.79-.8c-.17-.17-.34-.35-.52-.52s-.53-.54-.81-.81l-.53-.52-.91-.89-.49-.48-1.17-1.11-.3-.28-1.52-1.43-.45-.41-1.12-1-.63-.56-1-.92-.69-.61-1-.9-.73-.63-1-.9-.75-.64-1.13-1-.73-.6-1.35-1.11-.56-.45-.05-.05,14-28a10.46,10.46,0,0,0-18.71-9.35L247.51,65.15l-.07,0q-3.91-2.56-7.91-4.92l-.25-.15c-1.2-.71-2.41-1.4-3.63-2.08l-.54-.3c-1.23-.69-2.47-1.36-3.72-2l-.18-.1c-2.65-1.39-5.31-2.72-8-4l-.76-.35c-1.07-.5-2.15-1-3.23-1.47l-.85-.37c-1.23-.54-2.47-1.06-3.71-1.57l-.17-.08L226.88,23a10.46,10.46,0,0,0-18.71-9.36L194.54,40.89c-2.87-.8-5.76-1.53-8.65-2.18l-.45-.1c-1.25-.28-2.51-.54-3.76-.79l-.66-.13c-2.82-.56-5.64-1-8.48-1.45l-.6-.08c-1.17-.16-2.33-.31-3.5-.45l-1.11-.13c-1.06-.12-2.13-.23-3.2-.33-.33,0-.66-.07-1-.09-1.39-.13-2.78-.23-4.17-.32V10.46a10.46,10.46,0,0,0-20.92,0V34.84c-1.39.09-2.78.19-4.16.32l-1,.09-3.18.33-1.12.13-3.48.45-.62.08c-1.44.21-2.87.43-4.3.68h0c-1.38.24-2.76.49-4.14.76l-.69.14c-1.23.25-2.47.51-3.7.78l-.51.11q-4.34,1-8.62,2.18h0L88.83,13.62A10.46,10.46,0,0,0,70.13,23L82.5,47.73l-.06,0c-1.29.53-2.57,1.07-3.85,1.63l-.78.34q-1.65.74-3.3,1.5l-.71.33q-4,1.89-8,4l-.17.09c-1.25.66-2.49,1.34-3.74,2l-.53.3c-1.21.68-2.42,1.37-3.63,2.08l-.25.15q-4,2.36-7.9,4.91l-.07.05L37.07,40.29a10.46,10.46,0,1,0-18.71,9.35l14,28-.06.05-.52.43-1.38,1.12-.75.63-1.09.92-.8.67-1,.85L26,83l-.92.81-.79.7-.89.79L22.6,86l-.9.83-.68.62-1.45,1.36-.64.62-.81.77-.68.66-.72.7-.66.65c-.23.23-.46.45-.68.68l-.63.63-.65.66-.59.6-.66.68-.51.53-.71.74c-.13.15-.27.3-.41.44l-1,1.11-.18.2-.83.9-.29.32-.65.72-.29.33-.6.67-.25.28-.6.69-.18.2-.66.77,0,0c-2.17,2.54-3.36,4.11-3.52,4.32a10.45,10.45,0,0,0,0,12.55A172.44,172.44,0,0,0,22.8,142.18,219.26,219.26,0,0,0,41,157,204.72,204.72,0,0,0,61.86,170.3a186.81,186.81,0,0,0,37.94,16h0q8.19,2.41,16.51,4c.63.13,1.27.24,1.91.36a169,169,0,0,0,30.26,2.75h0a168.8,168.8,0,0,0,28-2.35c1.15-.19,2.31-.4,3.47-.62,3.19-.6,6.36-1.3,9.53-2.08l1.55-.4A191.94,191.94,0,0,0,256,157c1.85-1.35,3.63-2.7,5.36-4a211.84,211.84,0,0,0,27.28-25.23c3.9-4.34,6-7.14,6.24-7.43A10.45,10.45,0,0,0,295.66,108.89Zm-24.28,6.7a191.25,191.25,0,0,1-14.21,13.73c-4.11,3.59-8.79,7.36-14,11.13l-.23.16c-1,.69-1.93,1.37-2.89,2l-1.07.73-2.14,1.44-1.15.76c-.73.48-1.46.95-2.2,1.41l-1,.64q-1.5.93-3,1.83l-.19.12c-1.11.66-2.23,1.31-3.34,1.95l-.57.31c-.91.52-1.83,1-2.75,1.52l-.81.43-2.64,1.38-.72.38-3.18,1.56-.11.06a79.23,79.23,0,0,0,0-86.36l.19.09c1,.49,2,1,3.06,1.51l.83.43,2.5,1.3.94.51q1.28.69,2.55,1.41l.75.42c1.09.62,2.18,1.25,3.26,1.9l.48.29c.91.54,1.8,1.09,2.7,1.65l1.15.73,2,1.31,1.27.84c.66.43,1.31.88,2,1.32l1.22.84c.84.58,1.68,1.18,2.51,1.77l.57.4A193.59,193.59,0,0,1,272.85,114Zm-122.88,57h-.06a58.57,58.57,0,1,1,.13,0ZM77.89,155.22c-.92-.47-1.84-1-2.76-1.45l-.74-.39q-1.41-.76-2.82-1.56l-.51-.29c-1.13-.64-2.26-1.29-3.38-2l-.06,0c-1.05-.63-2.1-1.27-3.14-1.92l-.89-.57q-1.17-.73-2.34-1.5l-1-.68c-.78-.51-1.56-1-2.33-1.57l-.89-.6c-1.06-.74-2.12-1.48-3.18-2.24A194.13,194.13,0,0,1,24.15,114c.32-.35.65-.72,1-1.09l.47-.51.5-.53.8-.85.08-.08a191.89,191.89,0,0,1,54.74-40,79.2,79.2,0,0,0,.09,86.23c-1.12-.54-2.24-1.09-3.35-1.65Z"/><circle class="cls-1" cx="148.5" cy="113.99" r="17.26"/></g></g></svg>
+              </span>
+              <span class="close-eye">
+                <svg viewBox="0 0 296.93 129.5"><defs><style>.cls-1{fill:#fff;}</style></defs><title>closed-eye</title><g id="Layer_2" data-name="Layer 2"><g id="Capa_1" data-name="Capa 1"><g id="Layer_2-2" data-name="Layer 2"><g id="Capa_1-2" data-name="Capa 1"><path class="cls-1" d="M287.68.73c-5,5.5-30.6,31.2-44.5,41.3-29.5,21.3-61.4,32.1-94.7,32.1S83.28,63.33,53.78,42C39.88,32,14.18,7,9.88,3,5.78-.8-2.22,16.5.58,20.3A211.13,211.13,0,0,0,32.28,52l-14,28a10.38,10.38,0,0,0,4.6,13.94L23,94a9.85,9.85,0,0,0,4.7,1.1,10.55,10.55,0,0,0,9.4-5.8L49.5,64.4a189.72,189.72,0,0,0,33,17.4L70.1,106.6a10.38,10.38,0,0,0,4.59,13.94l.11.06a9.85,9.85,0,0,0,4.7,1.1,10.55,10.55,0,0,0,9.4-5.8l13.6-27.3a167.22,167.22,0,0,0,35.6,6V119a10.5,10.5,0,1,0,21,0h0V94.63a173.2,173.2,0,0,0,35.6-6l13.6,27.3a10.36,10.36,0,0,0,9.4,5.8,11.1,11.1,0,0,0,4.7-1.1,10.41,10.41,0,0,0,4.73-13.94l0-.06-12.4-24.8a196.48,196.48,0,0,0,33-17.4l12.4,24.9a10.36,10.36,0,0,0,9.4,5.8,11.1,11.1,0,0,0,4.7-1.1,10.41,10.41,0,0,0,4.73-13.94l0-.06-14-28a197.83,197.83,0,0,0,31.5-32C298.88,16.23,292-4.07,287.68.73Z"/></g></g></g></g></svg>
+              </span>
+              View
+            </button>
+          </div>
+          <div class="col">
+            <!--<img class="mac" src="images/works-mac.png">-->
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="testimonials-block">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="background">
+            <span class="bg-text">Testimonials</span>
+          </div>
+          <!-- Slider main container -->
+          <div class="swiper-container">
+            <!-- Additional required wrapper -->
+            <div class="swiper-wrapper">
+              <!-- Slides -->
+              <div class="swiper-slide">
+                <div class="row text-center">
+                  <div class="col-md-10 offset-md-1 col-lg-12 offset-lg-0">
+                    <div class="row photo">
+                      <div class="col">
+                        <img class="circular--square" src="images/tm1.jpg">
+                      </div>
+                    </div>
+                    <div class="row name">
+                      <div class="col">
+                        Gene Eidelman
+                      </div>
+                    </div>
+                    <div class="row position">
+                      <div class="col">
+                        CEO of <span class="green-text">Company</span>
+                      </div>
+                    </div>
+                    <div class="row testimonial-descr">
+                      <div class="col">
+                        Fusce in auctor mauris, in sodales est. Vivamus feugiat nunc vitae dignissim cursus.
+                        Nullam in tempus urna. Etiam pellentesque ex id nisi dignissim aliquam.
+                        Ut sed maximus diam, sit amet accumsan arcu.
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="row text-center">
+                  <div class="col-md-10 offset-md-1 col-lg-12 offset-lg-0">
+                    <div class="row photo">
+                      <div class="col">
+                        <img class="circular--square" src="images/tm2.jpg">
+                      </div>
+                    </div>
+                    <div class="row name">
+                      <div class="col">
+                        Gene Eidelman
+                      </div>
+                    </div>
+                    <div class="row position">
+                      <div class="col">
+                        Strategic Director of <span class="green-text">Company</span>
+                      </div>
+                    </div>
+                    <div class="row testimonial-descr">
+                      <div class="col">
+                        Mauris efficitur sapien ut massa lacinia, id iaculis est euismod. Etiam eu dapibus nibh.
+                        Interdum et malesuada fames ac ante ipsum primis in faucibus.
+                        Proin finibus quam id dictum fringilla. In bibendum enim finibus, sodales nisl in, iaculis eros.
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="row text-center">
+                  <div class="col-md-10 offset-md-1 col-lg-12 offset-lg-0">
+                    <div class="row photo">
+                      <div class="col">
+                        <img class="circular--square" src="images/tm1.jpg">
+                      </div>
+                    </div>
+                    <div class="row name">
+                      <div class="col">
+                        Gene Eidelman
+                      </div>
+                    </div>
+                    <div class="row position">
+                      <div class="col">
+                        CEO of <span class="green-text">Company</span>
+                      </div>
+                    </div>
+                    <div class="row testimonial-descr">
+                      <div class="col">
+                        Fusce in auctor mauris, in sodales est. Vivamus feugiat nunc vitae dignissim cursus.
+                        Nullam in tempus urna. Etiam pellentesque ex id nisi dignissim aliquam.
+                        Ut sed maximus diam, sit amet accumsan arcu.
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- If we need pagination -->
+            <div class="swiper-pagination"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="contact-us">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="background">
+            <span class="bg-text">Contact Us</span>
+          </div>
+          <div class="col-8 contact-form">
+            <form>
+              <div class="form-row">
+                <div class="col">
+                  <input type="text" class="input form-control" placeholder="First Name">
+                </div>
+                <div class="col">
+                  <input type="text" class="input form-control" placeholder="Last Name">
+                </div>
+              </div>
+              <div class="form-row mt-4">
+                <div class="col">
+                  <input type="text" class="input form-control" placeholder="Company Name">
+                </div>
+                <div class="col">
+                  <input type="text" class="input form-control" placeholder="Email*">
+                </div>
+              </div>
+              <div class="form-row mt-4">
+                <div class="col">
+                  <textarea rows="6" class="input-text-area form-control" placeholder="Message"></textarea>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+        <div class="row text-center send-btn">
+          <div class="col">
+            <button class="button">
+              <svg viewBox="0 0 512 413.34"><defs><style>.cls-1{fill:#fff;}</style></defs><title>plane</title><g id="Layer_2" data-name="Layer 2"><g id="Capa_1" data-name="Capa 1"><path class="cls-1" d="M510.46,5.82a10.73,10.73,0,0,0-.84-1.27A11.57,11.57,0,0,0,503.21.34h0L502.57.2h0a11.52,11.52,0,0,0-6.19.54L7.69,175.22a11.59,11.59,0,0,0-1.43,21.2L106,248.07l34.71,156a11.72,11.72,0,0,0,1.83,4.28,11.17,11.17,0,0,0,1.48,1.73,11.51,11.51,0,0,0,8,3.25h.06a11.54,11.54,0,0,0,7.8-3.06L254,323.54l103.29,52.12a11.58,11.58,0,0,0,16-6.13L511.14,16a11.75,11.75,0,0,0,.5-1.52,11.51,11.51,0,0,0-1.18-8.62ZM40.55,188.09,392.08,62.57,115.7,227Zm118.18,74.36h0a11.62,11.62,0,0,0-1.16,4L148.9,334.4l-19.68-88.46L342.34,119.12,162.16,258.39A11.53,11.53,0,0,0,158.73,262.45Zm8.78,109.28,11-86.29,53.41,26.95Zm188.81-22.49L257.5,299.37l-.51-.26-66.33-33.47L474.45,46.3Z"/></g></g></svg>
+              Send
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="footer">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col" style="padding-top: 23px">
+            <p>© AndyAndUX, 2018. All rights reserved.</p>
+          </div>
+          <div class="col text-right" style="padding-top: 23px">
+            <p>E-mail:support@andyux.com</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.1.0/js/swiper.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.1.0/js/swiper.min.js"></script>
 
     <!-- build:js scripts/main.min.js -->
-    <script src="../node_modules/jquery/dist/jquery.js"></script>
-    <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-
-    <script src="scripts/main.js"></script>
+    <script src="scripts/main.min.js"></script>
     <!-- endbuild -->
+
+    <script>
+      let mySwiper = new Swiper ('.swiper-container', {
+        // Optional parameters
+        direction: 'horizontal',
+        loop: true,
+
+        // If we need pagination
+        pagination: {
+          el: '.swiper-pagination',
+          type: 'bullets',
+          clickable: true
+        },
+
+        // Navigation arrows
+        navigation: {
+          nextEl: '.swiper-button-next',
+          prevEl: '.swiper-button-prev'
+        },
+
+        hashNavigation: true,
+
+        // And if we need scrollbar
+        scrollbar: {
+          el: '.swiper-scrollbar',
+        },
+
+        slidesPerView: 2,
+        spaceBetween: 40,
+
+        breakpoints: {
+          // when window width is <= 320px
+          768: {
+            slidesPerView: 1,
+            spaceBetween: 10
+          },
+        }
+      })
+
+    </script>
 
     <!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
     <script>

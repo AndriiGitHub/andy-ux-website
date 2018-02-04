@@ -65,6 +65,8 @@ gulp.task('styles', () => {
 
   // For best performance, don't add Sass partials to `gulp.src`
   return gulp.src([
+    'node_modules/bootstrap/dist/css/bootstrap.css',
+    'node_modules/bootstrap/dist/css/bootstrap-theme.css',
     'app/styles/**/*.scss',
     'app/styles/**/*.css'
   ])
@@ -86,11 +88,21 @@ gulp.task('styles', () => {
 // Concatenate and minify JavaScript. Optionally transpiles ES2015 code to ES5.
 // to enable ES2015 support remove the line `"only": "gulpfile.babel.js",` in the
 // `.babelrc` file.
+
+gulp.task('fonts', function() {
+  return gulp.src([
+    'node_modules/font-awesome-sass/assets/fonts/font-awesome/fontawesome-webfont.*'])
+    .pipe(gulp.dest('dist/styles/fonts/'));
+});
+
 gulp.task('scripts', () =>
     gulp.src([
       // Note: Since we are not using useref in the scripts build pipeline,
       //       you need to explicitly list your scripts here in the right order
       //       to be correctly concatenated
+      './node_modules/popper.js/dist/umd/popper.js',
+      './node_modules/jquery/dist/jquery.js',
+      './node_modules/bootstrap/dist/js/bootstrap.js',
       './app/scripts/main.js'
       // Other scripts
     ])
@@ -178,6 +190,7 @@ gulp.task('serve:dist', ['default'], () =>
 gulp.task('default', ['clean'], cb =>
   runSequence(
     'styles',
+    'fonts',
     ['lint', 'html', 'scripts', 'images', 'copy'],
     'generate-service-worker',
     cb
