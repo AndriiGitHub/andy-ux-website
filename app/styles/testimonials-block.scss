@@ -1,9 +1,14 @@
 .testimonials-block {
   background-color: #FFFFFF;
   padding-bottom: 60px;
+  font-size: 18px;
 
-  @media only screen and (max-width: 768px) {
-    padding-bottom: 40px;
+  .background {
+    background: #FFFFFF !important;
+  }
+
+  .justify-content-center {
+    margin: 0;
   }
 
   .swiper-container {
@@ -33,5 +38,34 @@
     border-bottom-left-radius: 50% 50%;
 
     height: 100px;
+  }
+
+  .testimonial-descr {
+    padding-top: 30px;
+    font-weight: 300;
+    color: #737373;
+  }
+
+  .name {
+    padding-top: 20px;
+    font-weight: 500;
+  }
+
+  .position {
+    padding-top: 8px;
+    font-weight: 300;
+  }
+
+  @media only screen and (max-width: 768px) {
+    padding-bottom: 40px;
+    font-size: 16px;
+
+    .justify-content-center {
+      padding-top: 20px;
+    }
+
+    .swiper-container {
+      height: 400px;
+    }
   }
 }

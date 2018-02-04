@@ -1,20 +1,40 @@
 .logo-block {
   background-image: url("../images/bg.png");
-  background-size: 100%;
+  background-position: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
 
   .container {
     padding-top: 20px;
     padding-bottom: 180px;
 
-    @media only screen and (max-width: 1080px) {
-      padding-bottom: 80px;
-      background-size: 100%;
-      background-position: right;
-    }
-
     @media only screen and (max-width: 768px) {
       padding-bottom: 40px;
     }
+  }
+
+  .logo-text {
+    margin-top: 70px;
+    font-weight: 900;
+    color: #FEFEFE;
+    font-size: 6.75em;
+    line-height: 110px;
+    text-transform: uppercase;
+    letter-spacing: 0.025em;
+    text-shadow: -1px 5px 20px rgba(0,0,0,.03);
+
+    @media only screen and (max-width: 1080px) {
+      font-size: 4em;
+      margin-top: 40px;
+      line-height: 80px;
+    }
+
+    @media only screen and (max-width: 768px) {
+      font-size: 4em;
+      margin-top: 40px;
+      line-height: 80px;
+    }
+
   }
 
   .btn-row {
@@ -25,10 +45,6 @@
     width: 200px;
   }
 
-  .logo-text {
-    text-shadow: -1px 5px 20px rgba(0,0,0,.03);
-  }
-
   .burger {
     font-size: 36px;
   }
@@ -37,6 +53,7 @@
     transition: all .2s ease-in-out;
     padding-left: 1.1rem;
     padding-right: 1.1rem;
+    font-size: 18px;
   }
 
   .nav-link:hover {
@@ -49,6 +66,16 @@
 
     .navbar-brand {
       width: 150px;
+    }
+
+    .logo-text {
+      margin-right: 0px;
+      margin-left: 0px;
+    }
+
+    .btn-row {
+      margin-right: 0;
+      margin-left: 0;
     }
 
   }

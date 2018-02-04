@@ -11,50 +11,9 @@ body {
   background-color: #FAFAFA;
 }
 
-
-.container, .form-control {
-  font-family: 'Montserrat', sans-serif;
-  color: #1F2023;
-  font-size: 18px;
-  letter-spacing: 0.025em;
-
-  @media only screen and (max-width: 768px) {
-
-    font-size: 16px;
-
-  }
-}
-
-.form-control {
-  font-weight: 300;
-}
-
 .container {
   font-weight: 400;
   max-width: 1070px;
-}
-
-.logo-text {
-  margin-top: 70px;
-  font-weight: 900;
-  color: #FEFEFE;
-  font-size: 6em;
-  line-height: 110px;
-  text-transform: uppercase;
-  letter-spacing: 0.025em;
-
-  @media only screen and (max-width: 1080px) {
-    font-size: 4em;
-    margin-top: 40px;
-    line-height: 80px;
-  }
-
-  @media only screen and (max-width: 768px) {
-    font-size: 4em;
-    margin-top: 40px;
-    line-height: 80px;
-  }
-
 }
 
 .button {
@@ -104,31 +63,12 @@ body {
   user-select: none;
 
   @media only screen and (max-width: 768px) {
-    font-size: 4em;
+    font-size: 6em;
   }
-}
-
-.name {
-  padding-top: 20px;
-  font-size: 18px;
-  font-weight: 500;
 }
 
 .green-text {
   color: #17E197;
-}
-
-.position {
-  padding-top: 8px;
-  font-size: 18px;
-  font-weight: 300;
-}
-
-.testimonial-descr {
-  padding-top: 30px;
-  font-size: 18px;
-  font-weight: 300;
-  color: #737373;
 }
 
 .footer {
@@ -140,12 +80,4 @@ body {
     font-size: 14px;
     font-weight: 300;
   }
-}
-
-.contact-form {
-  padding-top: 210px;
-}
-
-.send-btn {
-  padding-top: 35px;
 }
