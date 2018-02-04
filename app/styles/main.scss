@@ -65,6 +65,14 @@ body {
   @media only screen and (max-width: 768px) {
     font-size: 6em;
   }
+
+  @media only screen and (max-width: 576px) {
+    font-size: 4em;
+  }
+
+  @media only screen and (max-width: 375px) {
+    font-size: 3.5em;
+  }
 }
 
 .green-text {
@@ -75,9 +83,20 @@ body {
   height: 65px;
   background-color: #333;
 
+  .col {
+    padding-top: 23px;
+  }
+
   p {
     color: #CCCCCC;
     font-size: 14px;
     font-weight: 300;
+  }
+
+  @media only screen and (max-width: 516px) {
+    text-align: center;
+    p {
+      font-size: 10px;
+    }
   }
 }

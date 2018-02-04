@@ -9,6 +9,10 @@
     padding-top: 80px;
   }
 
+  .mac-mini {
+    visibility: hidden;
+  }
+
   .bg-text {
     margin-top: 60px;
     color: #FFFFFF;
@@ -16,7 +20,7 @@
   }
 
   .our-work-content {
-    padding-top: 310px;
+    padding-top: 50px;
 
     h4 {
       padding-bottom: 20px;
@@ -76,9 +80,9 @@
   }
 
   .mac {
-    margin-top: -600px;
+    margin-top: -630px;
     height: 45%;
-    margin-left: 250px;
+    margin-left: 255px;
   }
 
   @media only screen and (max-width: 768px) {
@@ -108,6 +112,52 @@
     .background {
       padding-top: 40px;
       width: 100%;
+    }
+  }
+
+  @media only screen and (max-width: 576px) {
+
+    .swiper-work {
+      width: 100%;
+      height: 1080px;
+    }
+
+    .our-work-content {
+      text-align: center;
+
+      h4 {
+        font-size: 16px;
+      }
+
+      padding-top: 0 !important;
+    }
+
+    .mac {
+      visibility: hidden;
+    }
+
+    .mac-mini {
+      visibility: visible;
+      padding-top: 30px !important;
+    }
+
+    .bg-text {
+      padding-top: 0;
+    }
+
+    .background {
+      padding-top: 10px;
+      width: 100%;
+    }
+
+    .eye-row {
+      text-align: center;
+      padding-top: 0;
+      padding-right: 0 !important;
+    }
+
+    .button {
+
     }
   }
 }

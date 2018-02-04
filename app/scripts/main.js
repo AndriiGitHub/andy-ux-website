@@ -54,19 +54,29 @@
     });
   }
 
-  var changeEyeOpen = function(isButtonHovered) {
-    var openEye = document.getElementsByClassName('open-eye')[0];
-    var closeEye = document.getElementsByClassName('close-eye')[0];
+  var changeEyeOpen = function(isButtonHovered, el) {
 
-    openEye.style.display = isButtonHovered ? 'inline' : 'none';
-    closeEye.style.display = isButtonHovered ? 'none' : 'inline';
+    console.log(el)
+
+    var openEye  = el.getElementsByClassName('open-eye')[0];
+    var closeEye = el.getElementsByClassName('close-eye')[0];
+
+    if(openEye && closeEye) {
+      openEye.style.display = isButtonHovered ? 'inline' : 'none';
+      closeEye.style.display = isButtonHovered ? 'none' : 'inline';
+    }
   };
 
-  document.getElementsByClassName('button')[0].addEventListener('mouseover', function() {
-    changeEyeOpen(true);
-  });
+  var buttons = document.getElementsByClassName('button');
 
-  document.getElementsByClassName('button')[0].addEventListener('mouseout', function() {
-    changeEyeOpen(false);
-  });
+  for(var i = 0; i < buttons.length; i++) {
+    buttons[i].addEventListener('mouseover', function(el) {
+      changeEyeOpen(true, el.target);
+    });
+
+    buttons[i].addEventListener('mouseout', function(el) {
+      changeEyeOpen(false, el.target);
+    });
+  }
+
 })();

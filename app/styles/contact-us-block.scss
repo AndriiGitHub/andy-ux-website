@@ -78,9 +78,28 @@
     letter-spacing: 0.025em;
 
     @media only screen and (max-width: 768px) {
-
       font-size: 16px;
+    }
 
+    @media only screen and (max-width: 516px) {
+      font-size: 14px;
+    }
+  }
+
+  @media only screen and (max-width: 516px) {
+
+    height: 640px;
+
+    .contact-form {
+      padding-top: 100px;
+    }
+
+    .form-row {
+      margin-top: 0 !important;
+
+      .col-sm-12 {
+        margin-bottom: 24px;
+      }
     }
   }
 }
