@@ -1,0 +1,51 @@
+.contact-us {
+  height: 740px;
+  background-color: #EDEDED;
+
+  .button {
+    svg {
+      height: 20px;
+      margin-bottom: -4px;
+      margin-right: 7px;
+    }
+  }
+
+  .background {
+    background-color: #EDEDED;
+  }
+
+  .bg-text {
+    color: #FFFFFF;
+  }
+
+
+  .input {
+    height: 50px;
+    padding-left: 20px;
+  }
+
+  .input-text-area {
+    padding: 10px 20px;
+  }
+
+  .form-row>.col, .form-row>[class*=col-] {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  .input, .input-text-area {
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    white-space: nowrap;
+    transition: all 0.4s ease 0s;
+  }
+
+  .input::placeholder, .input-text-area::placeholder {
+    color: #B3B3B3;
+  }
+
+  .input:active, .input:focus, .input-text-area:active, .input-text-area:focus {
+    box-shadow: 0px 10px 10px -10px rgba(0,0,0,0.37);
+  }
+}

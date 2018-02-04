@@ -62,11 +62,11 @@
     closeEye.style.display = isButtonHovered ? 'none' : 'inline';
   };
 
-  document.getElementById('button').addEventListener('mouseover', function() {
+  document.getElementsByClassName('button')[0].addEventListener('mouseover', function() {
     changeEyeOpen(true);
   });
 
-  document.getElementById('button').addEventListener('mouseout', function() {
+  document.getElementsByClassName('button')[0].addEventListener('mouseout', function() {
     changeEyeOpen(false);
   });
 })();

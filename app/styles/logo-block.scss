@@ -1,0 +1,55 @@
+.logo-block {
+  background-image: url("../images/bg.png");
+  background-size: 100%;
+
+  .container {
+    padding-top: 20px;
+    padding-bottom: 180px;
+
+    @media only screen and (max-width: 1080px) {
+      padding-bottom: 80px;
+      background-size: 100%;
+      background-position: right;
+    }
+
+    @media only screen and (max-width: 768px) {
+      padding-bottom: 40px;
+    }
+  }
+
+  .btn-row {
+    margin-top: 40px;
+  }
+
+  .navbar-brand {
+    width: 200px;
+  }
+
+  .logo-text {
+    text-shadow: -1px 5px 20px rgba(0,0,0,.03);
+  }
+
+  .burger {
+    font-size: 36px;
+  }
+
+  .nav-link {
+    transition: all .2s ease-in-out;
+    padding-left: 1.1rem;
+    padding-right: 1.1rem;
+  }
+
+  .nav-link:hover {
+    cursor: pointer;
+    font-weight: 500;
+    transform: scale(1.1);
+  }
+
+  @media only screen and (max-width: 768px) {
+
+    .navbar-brand {
+      width: 150px;
+    }
+
+  }
+}

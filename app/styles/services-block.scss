@@ -1,0 +1,59 @@
+.services-block {
+  background: #FFFFFF;
+  text-align: center;
+  padding-bottom: 150px;
+
+  svg path {
+    fill: #17E197
+  }
+
+  svg rect {
+    fill: #17E197
+  }
+
+  svg {
+    height: 70px;
+  }
+
+  .services-block-text {
+    color: #0C0C0C;
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 28px;
+    margin-bottom: 80px
+  }
+
+  .services-title {
+    padding-top: 30px;
+    font-size: 16px;
+    font-weight: 500;
+  }
+
+  .services-info {
+    padding-top: 20px;
+    font-size: 16px;
+    font-weight: 300;
+  }
+
+  @media only screen and (max-width: 768px) {
+
+    padding-bottom: 80px;
+
+    .services-item {
+      margin-top: 50px;
+    }
+
+    .services-block-text {
+      margin-bottom: 0px;
+      padding-top: 15px;
+    }
+
+    .services-title {
+      padding-top: 15px;
+    }
+
+    .services-info {
+      padding-top: 10px;
+    }
+  }
+}
