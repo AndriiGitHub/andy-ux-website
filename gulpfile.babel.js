@@ -65,6 +65,7 @@ gulp.task('styles', () => {
 
   // For best performance, don't add Sass partials to `gulp.src`
   return gulp.src([
+    'node_modules/swiper/dist/css/swiper.min.css',
     'node_modules/bootstrap/dist/css/bootstrap.css',
     'node_modules/bootstrap/dist/css/bootstrap-theme.css',
     'app/styles/**/*.scss',
@@ -91,6 +92,7 @@ gulp.task('styles', () => {
 
 gulp.task('fonts', function() {
   return gulp.src([
+    'app/styles/fonts/montserrat-*.*',
     'node_modules/font-awesome-sass/assets/fonts/font-awesome/fontawesome-webfont.*'])
     .pipe(gulp.dest('dist/styles/fonts/'));
 });
@@ -100,9 +102,10 @@ gulp.task('scripts', () =>
       // Note: Since we are not using useref in the scripts build pipeline,
       //       you need to explicitly list your scripts here in the right order
       //       to be correctly concatenated
-      './node_modules/popper.js/dist/umd/popper.js',
       './node_modules/jquery/dist/jquery.js',
       './node_modules/bootstrap/dist/js/bootstrap.js',
+      './node_modules/swiper/dist/js/swiper.min.js',
+      './node_modules/popper.js/dist/umd/popper.js',
       './app/scripts/main.js'
       // Other scripts
     ])
@@ -166,7 +169,7 @@ gulp.task('serve', ['scripts', 'styles'], () => {
 
   gulp.watch(['app/**/*.html'], reload);
   gulp.watch(['app/styles/**/*.{scss,css}'], ['styles', reload]);
-  gulp.watch(['app/scripts/**/*.js'], ['lint', 'scripts', reload]);
+  gulp.watch(['app/scripts/**/*.js'], ['scripts', reload]);
   gulp.watch(['app/images/**/*'], reload);
 });
 
@@ -191,7 +194,7 @@ gulp.task('default', ['clean'], cb =>
   runSequence(
     'styles',
     'fonts',
-    ['lint', 'html', 'scripts', 'images', 'copy'],
+    ['html', 'scripts', 'images', 'copy'],
     'generate-service-worker',
     cb
   )

@@ -55,13 +55,10 @@
   }
 
   var changeEyeOpen = function(isButtonHovered, el) {
-
-    console.log(el)
-
-    var openEye  = el.getElementsByClassName('open-eye')[0];
+    var openEye = el.getElementsByClassName('open-eye')[0];
     var closeEye = el.getElementsByClassName('close-eye')[0];
 
-    if(openEye && closeEye) {
+    if (openEye && closeEye) {
       openEye.style.display = isButtonHovered ? 'inline' : 'none';
       closeEye.style.display = isButtonHovered ? 'none' : 'inline';
     }
@@ -69,7 +66,7 @@
 
   var buttons = document.getElementsByClassName('button');
 
-  for(var i = 0; i < buttons.length; i++) {
+  for (var i = 0; i < buttons.length; i++) {
     buttons[i].addEventListener('mouseover', function(el) {
       changeEyeOpen(true, el.target);
     });
@@ -78,5 +75,4 @@
       changeEyeOpen(false, el.target);
     });
   }
-
 })();

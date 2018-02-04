@@ -1,18 +1,16 @@
-@import "font";
 @import "logo-block";
 @import "about-us-block";
 @import "contact-us-block";
 @import "services-block";
 @import "testimonials-block";
 @import "our-work-block";
-
+@import "stylesheet";
 
 body {
   background-color: #FAFAFA;
 }
 
 .container {
-  font-weight: 400;
   max-width: 1070px;
 }
 
@@ -51,6 +49,7 @@ body {
 }
 
 .bg-text {
+  font-family: 'montserratblack', sans-serif;
   color: #f1f1f1;
   font-size: 150px;
   font-weight: 900;
