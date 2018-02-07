@@ -15,6 +15,10 @@
     height: 70px;
   }
 
+  .bg-text {
+    padding-top: 60px;
+  }
+
   .services-block-text {
     color: #0C0C0C;
     font-size: 24px;
@@ -24,9 +28,11 @@
   }
 
   .services-title {
-    padding-top: 30px;
+    padding-top: 20px;
     font-size: 18px;
     font-weight: 500;
+    color: #17E197;
+    text-transform: uppercase;
   }
 
   .services-info {

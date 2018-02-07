@@ -1,6 +1,7 @@
 .our-work-block {
   background: #EDEDED;
   font-size: 18px;
+  scroll-behavior: smooth;
 
   padding-bottom: 50px;
 
@@ -14,13 +15,13 @@
   }
 
   .bg-text {
-    margin-top: 60px;
     color: #FFFFFF;
-    text-transform: none;
+    text-transform: uppercase;
+    padding-top: 60px;
   }
 
   .our-work-content {
-    padding-top: 50px;
+    padding-top: 20px;
 
     h4 {
       padding-bottom: 20px;
@@ -28,7 +29,7 @@
     }
 
     p {
-      font-weight: 300;
+      font-weight: 200;
       color: #737373;
     }
   }
@@ -39,7 +40,8 @@
 
   .swiper-work {
     width: 100%;
-    height: 780px;
+    height: 500px;
+    padding-top: 40px;
 
     .swiper-pagination-bullet-active {
       background: #555555;
@@ -79,26 +81,12 @@
     }
   }
 
-  .mac {
-    margin-top: -630px;
-    height: 45%;
-    margin-left: 255px;
-  }
-
   @media only screen and (max-width: 768px) {
     font-size: 16px;
 
-    height: 600px;
-
-    .mac {
-      margin-top: -520px;
-      height: 30%;
-      margin-left: 130px;
-    }
-
     .swiper-work {
       width: 100%;
-      height: 580px;
+      height: 50px;
     }
 
     .our-work-content {
@@ -154,10 +142,7 @@
       text-align: center;
       padding-top: 0;
       padding-right: 0 !important;
-    }
-
-    .button {
-
+      margin: 0;
     }
   }
 }

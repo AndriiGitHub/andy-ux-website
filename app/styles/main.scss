@@ -4,14 +4,28 @@
 @import "services-block";
 @import "testimonials-block";
 @import "our-work-block";
-@import "stylesheet";
+@import "fonts";
+@import "menu";
 
 body {
   background-color: #FAFAFA;
+  scroll-behavior: smooth;
+}
+
+.thin {
+  font-family: 'montserratextralight', sans-serif;
 }
 
 .container {
   max-width: 1070px;
+}
+
+.line {
+  border: 2px #17E197 solid;
+  background-color: #17E197;
+  border-radius: 2px;
+  width: 10px;
+  margin-top: 15px;
 }
 
 .button {
@@ -51,8 +65,8 @@ body {
 .bg-text {
   font-family: 'montserratblack', sans-serif;
   color: #f1f1f1;
-  font-size: 150px;
-  font-weight: 900;
+  font-size: 60px;
+  text-transform: uppercase;
 
   -webkit-touch-callout: none;
   -webkit-user-select: none;
@@ -65,13 +79,25 @@ body {
     font-size: 6em;
   }
 
-  @media only screen and (max-width: 576px) {
+  @media only screen and (max-width: 516px) {
     font-size: 4em;
   }
 
-  @media only screen and (max-width: 375px) {
+  @media only screen and (max-width: 416px) {
     font-size: 3.5em;
   }
+
+  @media only screen and (max-width: 375px) {
+    font-size: 3.2em;
+  }
+}
+
+.swiper-button-next {
+  background: none;
+}
+
+.swiper-button-prev {
+  background: none;
 }
 
 .green-text {

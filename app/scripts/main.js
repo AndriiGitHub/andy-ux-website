@@ -1,5 +1,6 @@
 /* eslint-env browser */
-(function() {
+
+(function($) {
   'use strict';
 
   // Check to make sure service workers are supported in the current browser,
@@ -75,4 +76,46 @@
       changeEyeOpen(false, el.target);
     });
   }
-})();
+
+  var submit = document.getElementById('submit');
+
+  submit.addEventListener('click', function () {
+    var form = $('#myForm').serializeArray();
+
+    var data = {};
+
+    form.forEach(function (field) {
+      data[field.name] = field.value;
+    });
+
+    console.log(data)
+
+  });
+
+  $('.plus-btn').click(function(){
+    $('body').toggleClass('menu-open');
+  })
+
+  $("a").on('click', function(event) {
+
+    // Make sure this.hash has a value before overriding default behavior
+    if (this.hash !== "") {
+      // Prevent default anchor click behavior
+      event.preventDefault();
+
+      // Store hash
+      var hash = this.hash;
+
+      // Using jQuery's animate() method to add smooth page scroll
+      // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+      $('html, body').animate({
+        scrollTop: $(hash).offset().top
+      }, 800, function(){
+
+        // Add hash (#) to URL when done scrolling (default click behavior)
+        window.location.hash = hash;
+      });
+    } // End if
+  });
+
+})(jQuery);

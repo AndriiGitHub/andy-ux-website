@@ -6,7 +6,7 @@
 
   .container {
     padding-top: 20px;
-    padding-bottom: 180px;
+    padding-bottom: 150px;
 
     @media only screen and (max-width: 768px) {
       padding-bottom: 40px;
@@ -15,14 +15,18 @@
 
   .logo-text {
     font-family: 'montserratblack', sans-serif;
-    margin-top: 70px;
+    margin-top: 115px;
     font-weight: 900;
     color: #FEFEFE;
-    font-size: 6.75em;
-    line-height: 110px;
+    font-size: 75px;
+    line-height: 90px;
     text-transform: uppercase;
     letter-spacing: 0.025em;
-    text-shadow: -1px 5px 20px rgba(0,0,0,.03);
+    text-shadow: 0 15px 30px 20px rgba(0,0,0,0.05);
+
+    .thin {
+      font-family: 'montserratextralight', sans-serif;
+    }
 
     @media only screen and (max-width: 1080px) {
       font-size: 4em;
@@ -36,15 +40,20 @@
       line-height: 80px;
     }
 
-    @media only screen and (max-width: 375px) {
+    @media only screen and (max-width: 516px) {
       margin-top: 20px;
       font-size: 3.5em;
+    }
+
+    @media only screen and (max-width: 416px) {
+      margin-top: 20px;
+      font-size: 3em;
     }
 
   }
 
   .btn-row {
-    margin-top: 40px;
+    margin-top: 65px;
   }
 
   .navbar-brand {
@@ -60,6 +69,7 @@
     padding-left: 1.1rem;
     padding-right: 1.1rem;
     font-size: 18px;
+    color: #212529;
   }
 
   .nav-link:hover {
