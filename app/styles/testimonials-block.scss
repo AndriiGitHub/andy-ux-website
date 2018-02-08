@@ -135,7 +135,12 @@
   @media only screen and (max-width: 412px) {
     .bg-text {
       font-size: 3em;
-      padding-top: 20px;
+    }
+  }
+
+  @media only screen and (max-width: 375px) {
+    .bg-text {
+      font-size: 2.5em;
     }
   }
 }

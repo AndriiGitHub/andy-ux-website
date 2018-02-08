@@ -157,4 +157,14 @@
       }
     }
   }
+
+  @media only screen and (max-width: 375px) {
+    .bg-text {
+      font-size: 2.5em;
+    }
+
+    .swiper-work {
+      height: 540px;
+    }
+  }
 }

@@ -129,7 +129,7 @@
 
     .services-info {
       padding-top: 10px;
-      font-size: 10px;
+      font-size: 12px;
     }
 
     .about-us {
@@ -139,10 +139,12 @@
     }
   }
 
-  @media only screen and (max-width: 412px) {
+  @media only screen and (max-width: 375px) {
+
+    padding-top: 70px;
+
     .bg-text {
-      font-size: 3em;
-      padding-top: 20px;
+      font-size: 2.5em;
     }
   }
 }
