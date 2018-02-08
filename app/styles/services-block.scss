@@ -7,6 +7,13 @@
     fill: #17E197
   }
 
+  .about-us {
+    padding-top: 50px;
+    font-size: 18px;
+    font-family: 'montserratextralight', sans-serif;
+    padding-bottom: 60px;
+  }
+
   svg rect {
     fill: #17E197
   }
@@ -68,9 +75,12 @@
 
   @media only screen and (max-width: 516px) {
     padding-bottom: 60px;
-
     .services-item {
       margin-top: 40px;
+    }
+
+    .bg-text {
+      padding-top: 20px;
     }
 
     .services-block-text {
@@ -86,6 +96,11 @@
     .services-info {
       padding-top: 10px;
       font-size: 12px;
+    }
+
+    .about-us {
+      padding-top: 20px;
+      padding-bottom: 20px;
     }
   }
 }

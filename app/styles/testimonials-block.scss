@@ -74,7 +74,7 @@
     }
 
     .swiper-container {
-      height: 400px;
+      height: 500px;
     }
   }
 
@@ -100,6 +100,22 @@
 
   @media only screen and (max-width: 576px) {
     padding-bottom: 15px;
+
+    .bg-text {
+      padding-top: 20px;
+    }
+
+    .nav {
+      display: none;
+    }
+
+    .swiper-slide .text-center {
+      padding-top: 20px;
+    }
+
+    .swiper-container {
+      height: 450px;
+    }
 
     .justify-content-center {
       padding-top: 0px;

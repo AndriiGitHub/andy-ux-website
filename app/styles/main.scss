@@ -1,5 +1,4 @@
 @import "logo-block";
-@import "about-us-block";
 @import "contact-us-block";
 @import "services-block";
 @import "testimonials-block";
@@ -72,11 +71,10 @@ body {
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
-
   user-select: none;
 
   @media only screen and (max-width: 768px) {
-    font-size: 6em;
+    font-size: 5em;
   }
 
   @media only screen and (max-width: 516px) {
@@ -84,11 +82,11 @@ body {
   }
 
   @media only screen and (max-width: 416px) {
-    font-size: 3.5em;
+    font-size: 3em;
   }
 
   @media only screen and (max-width: 375px) {
-    font-size: 3.2em;
+    font-size: 2.8em;
   }
 }
 
