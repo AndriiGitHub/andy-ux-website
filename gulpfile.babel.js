@@ -74,8 +74,7 @@ gulp.task('styles', () => {
 
 gulp.task('fonts', function() {
   return gulp.src([
-    'app/styles/fonts/montserrat-*.*',
-    'node_modules/font-awesome-sass/assets/fonts/font-awesome/fontawesome-webfont.*'])
+    'app/styles/fonts/montserrat-*.*'])
     .pipe(gulp.dest('dist/styles/fonts/'));
 });
 
@@ -89,7 +88,6 @@ gulp.task('scripts', () =>
       './node_modules/swiper/dist/js/swiper.min.js',
       './node_modules/popper.js/dist/umd/popper.js',
       './app/scripts/main.js'
-      // Other scripts
     ])
       .pipe($.newer('.tmp/scripts'))
       .pipe($.sourcemaps.init())

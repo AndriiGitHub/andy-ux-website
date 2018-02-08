@@ -3,7 +3,7 @@
 @import "services-block";
 @import "testimonials-block";
 @import "our-work-block";
-@import "fonts";
+@import "fonts-styles";
 @import "menu";
 
 body {
@@ -28,6 +28,7 @@ body {
 }
 
 .button {
+  font-family: 'montserratregular', sans-serif;
   width: 200px;
   height: 46px;
   border-radius: 23px;
@@ -39,26 +40,18 @@ body {
   outline: none !important;
   text-transform: uppercase;
   transition: all 0.3s ease 0s;
+  text-align: center;
 
   @media only screen and (max-width: 768px) {
     width: 150px;
     height: 35px;
     font-size: 16px;
   }
+
 }
 
 .button:hover {
   box-shadow: 0px 28px 44px -17px rgba(0,0,0,0.37) !important;
-}
-
-.background {
-  position:absolute;
-  z-index:0;
-  background:#FFFFFF;
-  display:block;
-  min-height:50%;
-  min-width:50%;
-  color:yellow;
 }
 
 .bg-text {

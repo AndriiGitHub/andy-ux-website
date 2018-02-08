@@ -1,6 +1,5 @@
 .our-work-block {
   background: #EDEDED;
-  font-size: 18px;
   scroll-behavior: smooth;
 
   padding-bottom: 50px;
@@ -17,10 +16,14 @@
     h4 {
       padding-bottom: 20px;
       font-size: 18px;
+      font-family: 'montserratmedium', sans-serif;
     }
 
     p {
+      font-family: 'montserratextralight', sans-serif;
       font-weight: 200;
+      font-size: 16px;
+
       color: #737373;
     }
   }
@@ -34,7 +37,7 @@
     padding-top: 40px;
 
     .swiper-pagination-bullet-active {
-      background: #555555;
+      background: #17E197;
       width: 10px !important;
       height: 10px !important;
       margin-bottom: -2px !important;
@@ -71,34 +74,39 @@
     }
   }
 
-  @media only screen and (max-width: 768px) {
-    font-size: 16px;
-
-    .swiper-work {
-      height: 400px;
+  @media only screen and (max-width: 900px) {
+    .photo-work {
+      order: -1;
     }
 
     .our-work-content {
-      h4 {
-        font-size: 16px;
-      }
-
-      p {
-        font-size: 14px;
-      }
+      text-align: center;
     }
 
     .eye-row {
+      text-align: center;
       padding-top: 20px;
     }
 
-    padding-top: 0 !important;
+    .swiper-work {
+      height: 690px;
+    }
+  }
+
+  @media only screen and (max-width: 800px) {
+    .bg-text {
+      font-size: 4em;
+      padding-top: 40px;
+    }
+
+    .swiper-pagination-work {
+      margin-top: 0;
+    }
   }
 
   @media only screen and (max-width: 576px) {
 
     padding-bottom: 20px;
-
 
     .swiper-work {
       height: 580px;
@@ -128,17 +136,13 @@
       order: -1;
     }
 
-    .mac-mini {
-      visibility: visible;
-      padding-top: 30px !important;
-    }
-
     .swiper-pagination-work {
-      margin-top: 0px;
+      margin-top: 0;
       order: 1;
     }
 
     .bg-text {
+      font-size: 3em;
       padding-top: 20px;
     }
 

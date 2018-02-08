@@ -73,6 +73,15 @@
       padding-top: 20px;
     }
 
+    .nav {
+      display: none;
+    }
+
+    .bg-text {
+      font-size: 4em;
+      padding-top: 40px;
+    }
+
     .swiper-container {
       height: 500px;
     }
@@ -102,6 +111,7 @@
     padding-bottom: 15px;
 
     .bg-text {
+      font-size: 3em;
       padding-top: 20px;
     }
 
@@ -118,7 +128,14 @@
     }
 
     .justify-content-center {
-      padding-top: 0px;
+      padding-top: 0;
+    }
+  }
+
+  @media only screen and (max-width: 412px) {
+    .bg-text {
+      font-size: 3em;
+      padding-top: 20px;
     }
   }
 }

@@ -7,6 +7,8 @@
     fill: #17E197
   }
 
+  font-family: 'montserratextralight', sans-serif;
+
   .about-us {
     padding-top: 50px;
     font-size: 18px;
@@ -40,6 +42,7 @@
     font-weight: 500;
     color: #17E197;
     text-transform: uppercase;
+    font-family: 'montserratmedium', sans-serif;
   }
 
   .services-info {
@@ -48,12 +51,37 @@
     font-weight: 300;
   }
 
-  @media only screen and (max-width: 768px) {
+  @media only screen and (max-width: 908px) {
+    .bg-text {
+      padding-top: 40px;
+      padding-bottom: 0;
+    }
+
+    .services-item {
+      margin-top: 40px;
+    }
+
+    .about-us {
+      padding-top: 30px;
+      padding-bottom: 30px;
+    }
+
+    padding-bottom: 80px;
+
+  }
+
+
+  @media only screen and (max-width: 800px) {
 
     padding-bottom: 80px;
 
     .services-item {
       margin-top: 50px;
+    }
+
+    .bg-text {
+      font-size: 4em;
+      padding-top: 20px;
     }
 
     .services-block-text {
@@ -73,34 +101,48 @@
     }
   }
 
-  @media only screen and (max-width: 516px) {
+  @media only screen and (max-width: 575px) {
+
+    svg {
+      height: 50px;
+    }
+
     padding-bottom: 60px;
     .services-item {
       margin-top: 40px;
     }
 
     .bg-text {
+      font-size: 3em;
       padding-top: 20px;
     }
 
     .services-block-text {
       padding-top: 10px;
-      font-size: 18px;
+      font-size: 16px;
     }
 
     .services-title {
       padding-top: 10px;
-      font-size: 14px;
+      font-size: 12px;
     }
 
     .services-info {
       padding-top: 10px;
-      font-size: 12px;
+      font-size: 10px;
     }
 
     .about-us {
+      font-size: 14px;
       padding-top: 20px;
-      padding-bottom: 20px;
+      padding-bottom: 0;
+    }
+  }
+
+  @media only screen and (max-width: 412px) {
+    .bg-text {
+      font-size: 3em;
+      padding-top: 20px;
     }
   }
 }
