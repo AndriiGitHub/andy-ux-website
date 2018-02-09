@@ -112,15 +112,16 @@
       padding-top: 20px;
     }
   }
+
   @media only screen and (max-width: 412px) {
     .bg-text {
-      font-size: 3em;
+      font-size: 2.5em;
     }
   }
 
-  @media only screen and (max-width: 375px) {
+  @media only screen and (max-width: 340px) {
     .bg-text {
-      font-size: 2.5em;
+      font-size: 2em;
     }
   }
 }

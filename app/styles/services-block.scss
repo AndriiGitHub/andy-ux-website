@@ -39,7 +39,6 @@
   .services-title {
     padding-top: 20px;
     font-size: 18px;
-    font-weight: 500;
     color: #17E197;
     text-transform: uppercase;
     font-family: 'montserratmedium', sans-serif;
@@ -139,12 +138,21 @@
     }
   }
 
-  @media only screen and (max-width: 375px) {
-
-    padding-top: 70px;
-
+  @media only screen and (max-width: 412px) {
     .bg-text {
       font-size: 2.5em;
+    }
+  }
+
+  @media only screen and (max-width: 365px) {
+    .bg-text {
+      font-size: 2.5em;
+    }
+  }
+
+  @media only screen and (max-width: 340px) {
+    .bg-text {
+      font-size: 2em;
     }
   }
 }

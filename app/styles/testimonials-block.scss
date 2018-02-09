@@ -93,10 +93,12 @@
     background-color: #17E197;
     border-radius: 100%;
     box-shadow: 0px 15px 39px -14px rgba(0,0,0,.34) !important;
+    -webkit-box-shadow: 0px 15px 26px -14px rgba(0,0,0,.34) !important;
   }
 
   .nav:hover {
     box-shadow: 0px 15px 39px -11px rgba(0,0,0,.34) !important;
+    -webkit-box-shadow: 0px 15px 28px -14px rgba(0,0,0,.39) !important;
     transition: all 0.3s ease 0s;
   }
 
@@ -134,13 +136,13 @@
 
   @media only screen and (max-width: 412px) {
     .bg-text {
-      font-size: 3em;
+      font-size: 2.5em;
     }
   }
 
-  @media only screen and (max-width: 375px) {
+  @media only screen and (max-width: 340px) {
     .bg-text {
-      font-size: 2.5em;
+      font-size: 2em;
     }
   }
 }

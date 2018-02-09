@@ -4,17 +4,17 @@
   background-repeat: no-repeat;
   background-size: cover;
 
+  @media only screen and (max-width: 575px) {
+    height: 100vh;
+  }
+
   .container {
     padding-top: 20px;
     padding-bottom: 150px;
-
-    @media only screen and (max-width: 768px) {
-      padding-bottom: 40px;
-    }
   }
 
   .button {
-    padding-top: 10px;
+    padding-top: 12px;
     display: inline-block
   }
 
@@ -46,19 +46,27 @@
     }
 
     @media only screen and (max-width: 768px) {
-      font-size: 4em;
+      font-size: 3.5em;
       margin-top: 40px;
       line-height: 80px;
     }
 
     @media only screen and (max-width: 516px) {
       margin-top: 20px;
-      font-size: 3.5em;
+      font-size: 3em;
+      line-height: 80px;
     }
 
     @media only screen and (max-width: 416px) {
       margin-top: 20px;
       font-size: 3em;
+    }
+
+    @media only screen and (max-width: 340px) {
+      margin-top: 50px;
+      font-size: 2.3em;
+      line-height: 60px;
+
     }
 
   }
@@ -92,23 +100,26 @@
 
   @media only screen and (max-width: 768px) {
 
+    .button {
+      padding-top: 6px;
+    }
+
     .navbar-brand {
       width: 150px;
     }
 
     .container {
-      padding-bottom: 100px;
+      padding-bottom: 80px;
     }
 
     .logo-text {
-      margin-right: 0px;
-      margin-left: 0px;
+      margin-right: 0;
+      margin-left: 0;
     }
 
     .btn-row {
       margin-right: 0;
       margin-left: 0;
     }
-
   }
 }

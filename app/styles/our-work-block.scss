@@ -30,6 +30,7 @@
 
   .eye-row {
     padding-top: 50px;
+    bottom:0
   }
 
   .swiper-work {
@@ -105,7 +106,6 @@
   }
 
   @media only screen and (max-width: 576px) {
-
     padding-bottom: 20px;
 
     .swiper-work {
@@ -151,20 +151,24 @@
       padding-top: 10px;
       padding-right: 0 !important;
       margin: 0;
+    }
+  }
 
-      .col {
-        padding-right: 0;
-      }
+  @media only screen and (max-width: 412px) {
+    .bg-text {
+      font-size: 2.5em;
     }
   }
 
   @media only screen and (max-width: 375px) {
-    .bg-text {
-      font-size: 2.5em;
-    }
-
     .swiper-work {
-      height: 540px;
+      height: 580px;
+    }
+  }
+
+  @media only screen and (max-width: 340px) {
+    .bg-text {
+      font-size: 2em;
     }
   }
 }
