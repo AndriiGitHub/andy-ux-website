@@ -1,0 +1,20 @@
+$primary-green: #17E197;
+$primary-white: #FFFFFF;
+$dark-white: #EDEDED;
+$medium-text: 'montserratmedium', sans-serif;
+$light-text: 'montserratlight', sans-serif;
+$extra-bold-text: 'montserratextrabold', sans-serif;
+$extra-light-text: 'montserratextralight', sans-serif;
+
+%swiper-pagination-bullet {
+  width: 6px;
+  height: 6px;
+  margin: 0 8px;
+}
+
+%swiper-pagination-bullet-active {
+  background: $primary-green;
+  width: 10px !important;
+  height: 10px !important;
+  margin-bottom: -2px !important;
+}

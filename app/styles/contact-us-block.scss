@@ -1,6 +1,8 @@
+@import "variables";
+
 .contact-us {
   height: 680px;
-  background-color: #EDEDED;
+  background-color: $dark-white;
   scroll-behavior: smooth;
 
   .button {
@@ -12,12 +14,12 @@
   }
 
   .background {
-    background-color: #EDEDED;
+    background-color: $dark-white;
   }
 
   .bg-text {
     padding-top: 40px;
-    color: #FFFFFF;
+    color: $primary-white;
   }
 
   .input {
@@ -58,13 +60,19 @@
     padding-top: 35px;
   }
 
+  .form-control {
+    font-family: $light-text;
+    color: #1F2023;
+    font-size: 18px;
+    letter-spacing: 0.025em;
+  }
+
   @media only screen and (max-width: 768px) {
+    height: 700px;
 
     .form-control {
       font-size: 16px;
     }
-
-    height: 700px;
 
     .input {
       height: 40px;
@@ -88,28 +96,16 @@
     }
   }
 
-  .form-control {
-    font-family: 'montserratlight', sans-serif;
-    color: #1F2023;
-    font-size: 18px;
-    font-weight: 300;
-    letter-spacing: 0.025em;
-
-    @media only screen and (max-width: 768px) {
-      font-size: 16px;
-    }
-
-    @media only screen and (max-width: 516px) {
-      font-size: 14px;
-    }
-  }
-
   @media only screen and (max-width: 576px) {
     height: 640px;
 
     .bg-text {
       font-size: 3em;
       padding-top: 20px;
+    }
+
+    .form-control {
+      font-size: 14px;
     }
   }
 

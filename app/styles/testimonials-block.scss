@@ -1,10 +1,12 @@
+@import "variables";
+
 .testimonials-block {
-  background-color: #FFFFFF;
+  background-color: $primary-white;
   padding-bottom: 60px;
   font-size: 18px;
 
   .background {
-    background: #FFFFFF !important;
+    background: $primary-white !important;
   }
 
   .bg-text {
@@ -24,16 +26,11 @@
     height: 450px;
 
     .swiper-pagination-bullet-active {
-      background: #17E197;
-      width: 10px !important;
-      height: 10px !important;
-      margin-bottom: -2px !important;
+      @extend %swiper-pagination-bullet-active;
     }
 
     .swiper-pagination-bullet {
-      width: 6px;
-      height: 6px;
-      margin: 0 8px;
+      @extend %swiper-pagination-bullet;
     }
   }
 
@@ -47,22 +44,41 @@
   }
 
   .testimonial-descr {
-    font-family: 'montserratlight', sans-serif;
+    font-family: $light-text;
     padding-top: 30px;
-    font-weight: 300;
     color: #737373;
   }
 
   .name {
-    font-family: 'montserratmedium', sans-serif;
+    font-family: $medium-text;
     padding-top: 20px;
-    font-weight: 500;
   }
 
   .position {
-    font-family: 'montserratlight', sans-serif;
+    font-family: $light-text;
     padding-top: 8px;
-    font-weight: 300;
+  }
+
+  .nav {
+    height: 74px;
+    width: 74px;
+    background-color: $primary-green;
+    border-radius: 100%;
+    box-shadow: 0px 15px 39px -14px rgba(0,0,0,.34) !important;
+    -webkit-box-shadow: 0px 15px 26px -14px rgba(0,0,0,.34) !important;
+  }
+
+  .nav:hover {
+    box-shadow: 0px 15px 39px -11px rgba(0,0,0,.34) !important;
+    -webkit-box-shadow: 0px 15px 28px -14px rgba(0,0,0,.39) !important;
+    transition: all 0.3s ease 0s;
+  }
+
+  .nav .material-icons {
+    padding-top: 19px;
+    padding-left: 18px;
+    color: $primary-white;
+    font-size: 36px;
   }
 
   @media only screen and (max-width: 768px) {
@@ -87,38 +103,12 @@
     }
   }
 
-  .nav {
-    height: 74px;
-    width: 74px;
-    background-color: #17E197;
-    border-radius: 100%;
-    box-shadow: 0px 15px 39px -14px rgba(0,0,0,.34) !important;
-    -webkit-box-shadow: 0px 15px 26px -14px rgba(0,0,0,.34) !important;
-  }
-
-  .nav:hover {
-    box-shadow: 0px 15px 39px -11px rgba(0,0,0,.34) !important;
-    -webkit-box-shadow: 0px 15px 28px -14px rgba(0,0,0,.39) !important;
-    transition: all 0.3s ease 0s;
-  }
-
-  .nav .material-icons {
-    padding-top: 19px;
-    padding-left: 18px;
-    color: white;
-    font-size: 36px;
-  }
-
   @media only screen and (max-width: 576px) {
     padding-bottom: 15px;
 
     .bg-text {
       font-size: 3em;
       padding-top: 20px;
-    }
-
-    .nav {
-      display: none;
     }
 
     .swiper-slide .text-center {

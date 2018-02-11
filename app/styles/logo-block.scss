@@ -1,3 +1,5 @@
+@import "variables";
+
 .logo-block {
   background-image: url("../images/bg.png");
   background-position: 100%;
@@ -20,7 +22,7 @@
 
   .button:hover {
     text-decoration: none;
-    color: #FFFFFF;
+    color: $primary-white;
   }
 
   .logo-text {
@@ -35,7 +37,7 @@
     text-shadow: 0 15px 30px 20px rgba(0,0,0,0.05);
 
     .thin {
-      font-family: 'montserratextralight', sans-serif;
+      font-family: $extra-light-text;
     }
 
     @media only screen and (max-width: 1080px) {
@@ -48,13 +50,11 @@
     @media only screen and (max-width: 768px) {
       font-size: 3.5em;
       margin-top: 40px;
-      line-height: 80px;
     }
 
     @media only screen and (max-width: 516px) {
       margin-top: 20px;
       font-size: 3em;
-      line-height: 80px;
     }
 
     @media only screen and (max-width: 416px) {
@@ -94,7 +94,7 @@
 
   .nav-link:hover {
     cursor: pointer;
-    font-family: 'montserratmedium', sans-serif;
+    font-family: $medium-text;
     transform: scale(1.1);
   }
 
@@ -112,12 +112,7 @@
       padding-bottom: 80px;
     }
 
-    .logo-text {
-      margin-right: 0;
-      margin-left: 0;
-    }
-
-    .btn-row {
+    .logo-text, .btn-row {
       margin-right: 0;
       margin-left: 0;
     }

@@ -1,3 +1,5 @@
+@import "variables";
+
 .menu-container {
   display: none;
 }
@@ -11,7 +13,7 @@
     display: flex;
     position: absolute;
     z-index: 1;
-    font-family: 'montserratmedium', sans-serif;
+    font-family: $medium-text;
     color: black;
   }
 
@@ -51,16 +53,16 @@
     visibility: hidden;
     ul {
       li {
-        font-family: 'montserratextrabold', sans-serif;
+        font-family: $extra-bold-text;
         font-size: 45px;
-        color: #FFFFFF;
+        color: $primary-white;
         min-height: 45px;
         padding: 15px;
         text-align: center;
         text-decoration: none;
         a{
           cursor:pointer;
-          color: #FFFFFF;
+          color: $primary-white;
         }
       }
     }
@@ -77,7 +79,7 @@
       background: transparent;
     }
     &:nth-child(odd){
-      background: #ededed;
+      background: $dark-white;
     }
   }
 
@@ -93,7 +95,7 @@
     width: 52px;
     height: 52px;
     border-radius: 40px;
-    background: #ededed;
+    background: $dark-white;
     position: relative;
     box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16),0 2px 10px 0 rgba(0,0,0,0.12);
     cursor:pointer;
@@ -109,7 +111,7 @@
     }
 
     &:hover{
-      background: #ededed;
+      background: $dark-white;
       div{
         background: white;
       }

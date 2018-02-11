@@ -1,11 +1,13 @@
+@import "variables";
+
 .our-work-block {
-  background: #EDEDED;
+  background: $dark-white;
   scroll-behavior: smooth;
 
   padding-bottom: 50px;
 
   .bg-text {
-    color: #FFFFFF;
+    color: $primary-white;
     text-transform: uppercase;
     padding-top: 60px;
   }
@@ -16,12 +18,11 @@
     h4 {
       padding-bottom: 20px;
       font-size: 18px;
-      font-family: 'montserratmedium', sans-serif;
+      font-family: $medium-text;
     }
 
     p {
-      font-family: 'montserratextralight', sans-serif;
-      font-weight: 200;
+      font-family: $extra-light-text;
       font-size: 16px;
 
       color: #737373;
@@ -38,16 +39,11 @@
     padding-top: 40px;
 
     .swiper-pagination-bullet-active {
-      background: #17E197;
-      width: 10px !important;
-      height: 10px !important;
-      margin-bottom: -2px !important;
+      @extend %swiper-pagination-bullet-active;
     }
 
     .swiper-pagination-bullet {
-      width: 6px;
-      height: 6px;
-      margin: 0 8px;
+      @extend %swiper-pagination-bullet;
     }
 
     .swiper-pagination-work {
@@ -80,12 +76,11 @@
       order: -1;
     }
 
-    .our-work-content {
+    .our-work-content, .eye-row {
       text-align: center;
     }
 
     .eye-row {
-      text-align: center;
       padding-top: 20px;
     }
 
@@ -116,6 +111,7 @@
     .our-work-content {
       margin: 0;
       text-align: center;
+      padding-top: 0 !important;
 
       h4 {
         font-size: 16px;
@@ -124,8 +120,6 @@
       p {
         font-size: 14px;
       }
-
-      padding-top: 0 !important;
     }
 
     .work-text {
