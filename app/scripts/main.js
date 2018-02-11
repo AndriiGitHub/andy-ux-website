@@ -23,19 +23,6 @@
     });
   }
 
-  var submit = document.getElementById('submit');
-
-  submit.addEventListener('click', function () {
-    var form = $('#myForm').serializeArray();
-
-    var data = {};
-
-    form.forEach(function (field) {
-      data[field.name] = field.value;
-    });
-
-  });
-
   $('.plus-btn').click(function(){
     $('body').toggleClass('menu-open');
   })

@@ -47,6 +47,7 @@ gulp.task('styles', () => {
 
   // For best performance, don't add Sass partials to `gulp.src`
   return gulp.src([
+    'node_modules/toastr/build/toastr.css',
     'node_modules/swiper/dist/css/swiper.min.css',
     'node_modules/bootstrap/dist/css/bootstrap.css',
     'node_modules/bootstrap/dist/css/bootstrap-theme.css',
@@ -84,9 +85,11 @@ gulp.task('scripts', () =>
       //       you need to explicitly list your scripts here in the right order
       //       to be correctly concatenated
       './node_modules/jquery/dist/jquery.js',
+      './node_modules/toastr/toastr.js',
       './node_modules/bootstrap/dist/js/bootstrap.js',
       './node_modules/swiper/dist/js/swiper.min.js',
       './node_modules/popper.js/dist/umd/popper.js',
+      './app/scripts/lib/*.js',
       './app/scripts/main.js'
     ])
       .pipe($.sourcemaps.init())
