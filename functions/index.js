@@ -11,9 +11,10 @@ const app = express();
 
 app.use(bodyParser.json());
 
+
 // POST /email
-app.post('/email', (req, res) => {
-  const { email, message, company, first, last } = req.body;
+app.get('/email', (req, res) => {
+  const { email, message, company, first, last } = req.query;
 
   const text = MessageGeneratorService.generateMessageText(
     { message, first, last, company, email }
