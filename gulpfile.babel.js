@@ -89,8 +89,8 @@ gulp.task('scripts', () =>
       './node_modules/popper.js/dist/umd/popper.js',
       './app/scripts/main.js'
     ])
-      .pipe($.newer('.tmp/scripts'))
       .pipe($.sourcemaps.init())
+      .pipe($.babel())
       .pipe($.sourcemaps.write())
       .pipe(gulp.dest('.tmp/scripts'))
       .pipe($.concat('main.min.js'))
