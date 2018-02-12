@@ -49,4 +49,44 @@
     } // End if
   });
 
+
+  $(document).ready(function () {
+
+    var swiper1 = new Swiper ('.swiper-testimonials', {
+      direction: 'horizontal',
+      loop: true,
+
+      pagination: {
+        el: '.swiper-pagination-testimonials',
+        type: 'bullets',
+        clickable: true
+      },
+
+      navigation: {
+        nextEl: '.swiper-button-next-testimonials',
+        prevEl: '.swiper-button-prev-testimonials'
+      },
+
+      mousewheel: {
+        forceToAxis: true,
+      }
+    });
+
+    var swiper2 = new Swiper ('.swiper-work', {
+      direction: 'horizontal',
+      loop: true,
+
+      pagination: {
+        el: '.swiper-pagination-work',
+        type: 'bullets',
+        clickable: true
+      },
+
+      mousewheel: {
+        forceToAxis: true,
+      }
+    })
+
+  });
+
 })(jQuery);
