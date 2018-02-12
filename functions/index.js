@@ -24,7 +24,7 @@ app.get('/email', (req, res) => {
     res.status(400).json({error: "Email Required"});
   }
 
-  return EmailSenderService.sendMail(email, text)
+  return EmailSenderService.sendMail(text)
     .then(() => res.status(200).json({}))
     .catch((error) => {
       console.log(error);

@@ -32,7 +32,7 @@ class EmailSenderService {
     const mailOptions = {
       from    : this.FROM,
       subject : this.SUBJECT,
-      to      : email,
+      to      : functions.config().gmail.email,
       text    : text
     };
 
