@@ -25,7 +25,11 @@
     $.ajax({
       url: 'https://us-central1-andy-ux-landing.cloudfunctions.net/api/email?' + $.param(formData),
       type: 'GET',
-      dataType: 'json'
+      dataType: 'json',
+      success: function () {
+        $('#myForm')[0].reset();
+        toastr.success('Sent');
+      }
     });
 
   });
