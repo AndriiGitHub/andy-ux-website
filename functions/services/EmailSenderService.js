@@ -19,7 +19,7 @@ class EmailSenderService {
     return `"AndyAndUX Mailer" <andyuxdev@gmail.com>`;
   }
 
-  sendMail (email, text) {
+  sendMail (text) {
 
     const mailTransport = nodemailer.createTransport({
       service: this.EMAIL_SERVICE,
