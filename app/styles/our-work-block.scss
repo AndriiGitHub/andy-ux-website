@@ -12,6 +12,16 @@
     padding-top: 60px;
   }
 
+  .button {
+    padding-top:12px;
+    display: inline-block
+  }
+
+  .button:hover {
+    text-decoration: none;
+    color: $primary-white;
+  }
+
   .our-work-content {
     padding-top: 20px;
 
@@ -97,6 +107,10 @@
 
     .swiper-pagination-work {
       margin-top: 0;
+    }
+
+    .button {
+      padding-top:7px;
     }
   }
 
