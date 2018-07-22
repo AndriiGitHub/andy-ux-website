@@ -8,7 +8,7 @@
         "value" : "*"
       } ]
     }, {
-      "source" : "**/*.@(js|css)",
+      "source" : "**/*.@(js|css|js?id=UA-114386255-1)",
       "headers" : [ {
         "key" : "Cache-Control",
         "value" : "max-age=604800"
