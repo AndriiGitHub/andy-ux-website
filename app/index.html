@@ -15,6 +15,12 @@
 
     <link rel="icon" href="images/favicon.ico">
     <link rel="stylesheet"  href="styles/main.css">
+
+
+    <link rel="preload" href="styles/toastr.css" as="style" onload="this.rel='stylesheet'">
+    <link rel="preload"  href="styles/bootstrap.css" as="style" onload="this.rel='stylesheet'">
+    <link rel="preload"  href="styles/swiper.min.css" as="style" onload="this.rel='stylesheet'">
+    
     <link rel="preload" href="https://fonts.googleapis.com/icon?family=Material+Icons" as="style" onload="this.rel='stylesheet'">
     		<script>
 		/*! loadCSS. [c]2017 Filament Group, Inc. MIT License */
@@ -72,6 +78,32 @@
 		// which will catch very old browsers (android 2.x, old firefox) that don't support onload on link
 		setTimeout( enableStylesheet, 3000 );
 	};
+
+	// loop through link elements in DOM
+	rp.poly = function(){
+		// double check this to prevent external calls from running
+		if( rp.support() ){
+			return;
+		}
+		var links = w.document.getElementsByTagName( "link" );
+		for( var i = 0; i < links.length; i++ ){
+			var link = links[ i ];
+			// qualify links to those with rel=preload and as=style attrs
+			if( link.rel === "preload" && link.getAttribute( "as" ) === "style" && !link.getAttribute( "data-loadcss" ) ){
+				// prevent rerunning on link
+				link.setAttribute( "data-loadcss", true );
+				// bind listeners to toggle media back
+				rp.bindMediaToggle( link );
+			}
+		}
+	};
+
+	// if unsupported, run the polyfill
+	if( !rp.support() ){
+		// run once at least
+		rp.poly();
+
+=======
 
 	// loop through link elements in DOM
 	rp.poly = function(){
@@ -657,6 +689,11 @@ Our strong point is communication. We are based in Ukraine but don't worry about
             <div class="clutch-widget" data-url="https://clutch.co" data-widget-type="2" data-height="90" data-clutchcompany-id="33683"></div>
           </div>
           <div class="col rights-protection text-right copyright">            
+        <div class="row justify-content-start">
+          <div class="col">
+            <div class="clutch-widget" data-url="https://clutch.co" data-widget-type="2" data-height="90" data-clutchcompany-id="33683"></div>
+          </div>
+          <div class="col rights-protection text-right">            
             <p>© AndyAndUX, 2018. All rights reserved.</p>
           </div>
         </div>
