@@ -1,8 +1,11 @@
 @import "variables";
 
+  .contact-us #submit:hover svg {
+    transform: rotate(30deg)!important;
+  }
 .contact-us {
   height: 680px;
-  background-color: $dark-white;
+  // background-color: $dark-white;
   scroll-behavior: smooth;
 
   .button {
@@ -19,7 +22,7 @@
 
   .bg-text {
     padding-top: 40px;
-    color: $primary-white;
+    // color: $primary-white;
   }
 
   .input {
@@ -37,19 +40,25 @@
   }
 
   .input, .input-text-area {
-    border-radius: 5px;
-    border: none;
+    border: 0px;
+    border-radius: 0px;
+    border-bottom: 2px solid #b9f6e0;
     outline: none;
     white-space: nowrap;
-    transition: all 0.4s ease 0s;
+    transition: all .4s ease 0s;
+  }
+  .form-control:focus {
+      color: #161616;
+      background-color: #fff;
+      border: 0px solid;
+      border-bottom: 2px solid #17e197;
+      border-color: #17e197;
+      outline: 0;
+      box-shadow: none;
   }
 
   .input::placeholder, .input-text-area::placeholder {
     color: #B3B3B3;
-  }
-
-  .input:active, .input:focus, .input-text-area:active, .input-text-area:focus {
-    box-shadow: 0 10px 12px -3px rgba(0,0,0,0.10);
   }
 
   .contact-form {

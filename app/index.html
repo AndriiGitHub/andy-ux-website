@@ -3,9 +3,9 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="description" content="">
+    <meta name="description" content="Improve design of your website">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-
+    <meta name="keywords" content="web design, website redesign,UI,UX,design,user experience,user interface,redesign">
     <link rel="icon" href="/images/favicon-16x16.png" sizes="16x16" type="image/png">
     <link rel="icon" href="/images/android-chrome-192x192.png" sizes="192x192" type="image/png">
     <link rel="icon" href="/images/android-chrome-256x256.png" sizes="256x256" type="image/png">
@@ -14,13 +14,116 @@
     <meta name="msapplication-TileImage" content="/images/mstile-150x150.png">
 
     <link rel="icon" href="images/favicon.ico">
+    <link rel="stylesheet"  href="styles/main.css">
+    <link rel="preload" href="https://fonts.googleapis.com/icon?family=Material+Icons" as="style" onload="this.rel='stylesheet'">
+    		<script>
+		/*! loadCSS. [c]2017 Filament Group, Inc. MIT License */
+/* This file is meant as a standalone workflow for
+- testing support for link[rel=preload]
+- enabling async CSS loading in browsers that do not support rel=preload
+- applying rel preload css once loaded, whether supported or not.
+*/
+(function( w ){
+	"use strict";
+	// rel=preload support test
+	if( !w.loadCSS ){
+		w.loadCSS = function(){};
+	}
+	// define on the loadCSS obj
+	var rp = loadCSS.relpreload = {};
+	// rel=preload feature support test
+	// runs once and returns a function for compat purposes
+	rp.support = (function(){
+		var ret;
+		try {
+			ret = w.document.createElement( "link" ).relList.supports( "preload" );
+		} catch (e) {
+			ret = false;
+		}
+		return function(){
+			return ret;
+		};
+	})();
 
-    <link rel="stylesheet" href="styles/toastr.css">
-    <link rel="stylesheet" href="styles/bootstrap.css">
-    <link rel="stylesheet" href="styles/swiper.min.css">
-    <link rel="stylesheet" href="styles/main.css">
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <title></title>
+	// if preload isn't supported, get an asynchronous load by using a non-matching media attribute
+	// then change that media back to its intended value on load
+	rp.bindMediaToggle = function( link ){
+		// remember existing media attr for ultimate state, or default to 'all'
+		var finalMedia = link.media || "all";
+
+		function enableStylesheet(){
+			link.media = finalMedia;
+		}
+
+		// bind load handlers to enable media
+		if( link.addEventListener ){
+			link.addEventListener( "load", enableStylesheet );
+		} else if( link.attachEvent ){
+			link.attachEvent( "onload", enableStylesheet );
+		}
+
+		// Set rel and non-applicable media type to start an async request
+		// note: timeout allows this to happen async to let rendering continue in IE
+		setTimeout(function(){
+			link.rel = "stylesheet";
+			link.media = "only x";
+		});
+		// also enable media after 3 seconds,
+		// which will catch very old browsers (android 2.x, old firefox) that don't support onload on link
+		setTimeout( enableStylesheet, 3000 );
+	};
+
+	// loop through link elements in DOM
+	rp.poly = function(){
+		// double check this to prevent external calls from running
+		if( rp.support() ){
+			return;
+		}
+		var links = w.document.getElementsByTagName( "link" );
+		for( var i = 0; i < links.length; i++ ){
+			var link = links[ i ];
+			// qualify links to those with rel=preload and as=style attrs
+			if( link.rel === "preload" && link.getAttribute( "as" ) === "style" && !link.getAttribute( "data-loadcss" ) ){
+				// prevent rerunning on link
+				link.setAttribute( "data-loadcss", true );
+				// bind listeners to toggle media back
+				rp.bindMediaToggle( link );
+			}
+		}
+	};
+
+	// if unsupported, run the polyfill
+	if( !rp.support() ){
+		// run once at least
+		rp.poly();
+
+		// rerun poly on an interval until onload
+		var run = w.setInterval( rp.poly, 500 );
+		if( w.addEventListener ){
+			w.addEventListener( "load", function(){
+				rp.poly();
+				w.clearInterval( run );
+			} );
+		} else if( w.attachEvent ){
+			w.attachEvent( "onload", function(){
+				rp.poly();
+				w.clearInterval( run );
+			} );
+		}
+	}
+
+
+	// commonjs
+	if( typeof exports !== "undefined" ){
+		exports.loadCSS = loadCSS;
+	}
+	else {
+		w.loadCSS = loadCSS;
+	}
+}( typeof global !== "undefined" ? global : this ) );
+
+		</script>
+    <title>AndyandUX design company</title>
   </head>
   <body>
 
@@ -50,6 +153,9 @@
                     <a class="nav-link" href="#testimonials-block">Clients</a>
                   </li>
                   <li class="nav-item">
+                    <a class="nav-link pr-0" href="#">Blog</a>
+                  </li>
+                  <li class="nav-item">
                     <a class="nav-link pr-0" href="#contact-us">Contact</a>
                   </li>
                 </ul>
@@ -60,7 +166,7 @@
         </div>
         <div class="row logo-text">
           <div class="col-md-10 offset-md-1 col-lg-9 offset-lg-0">
-            Improve <br/><span class="thin">the design of</span> your interface
+            Website Design <br/><span class="thin">with <br/></span> style
           </div>
         </div>
         <div class="row btn-row">
@@ -101,10 +207,13 @@
         </div>
         <div class="row justify-content-center about-us">
           <div class="col-10 col-sm-10 col-md-9 col-lg-9">
-            We are a small team of designers passionate about great UX and nice UI.
-            Our mission is to make software easier and more pleasurable to use.
-            We passionate about great UX and love complex web interfaces and want
-            to make sure people have a great time using them.
+            We’re a group of experienced professionals passionate about creating great User Experiences and visually attractive, highly usable User Interfaces.<br/><br/>
+
+We don't have a strong portfolio, we are just starting out and we value each and every client regardless of the size of the project. <br/><br/>
+
+We are generalists. Right now we want to dive deeper into blockchain domain.<br/><br/>
+
+Our strong point is communication. We are based in Ukraine but don't worry about that, we are available for 5 hours of business time (EST).<br/><br/>
           </div>
         </div>
         <div class="row">
@@ -299,7 +408,7 @@
                           Our job was to redesign of a cloud PBX installation wizard. This is difficult and important
                           step to get access to a telecommunication system. Therefore it should be intuitive and easy
                           to use. FOr us it was challenge to create a user-friendly interface for a user that has not
-                          previously used a telecommunication system.
+                          previously used a telecommunication system. We have received very positive feedback for our work, you can read it on our Clutch page under "Enrollment Form UX/UI for Communications Company" name".
                         </p>
                       </div>
                     </div>
@@ -319,6 +428,66 @@
                   </div>
                   <div class="col-sm-8 offset-sm-2 col-md-8 offset-md-2 offset-lg-0 col-lg-7 photo-work">
                     <img class="img-fluid" src="images/telebroad.png" width="100%" height="auto" />
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="row">
+                  <div class="col-sm-10 col-md-10 offset-sm-1 col-lg-5 offset-lg-0 work-text">
+                    <div class="row our-work-content">
+                      <div class="col">
+                        <h4>InkBoard Finance Dashboard Web Design</h4>
+                        <p>
+                          This is a design of a finance dashboard. InkBoard was designed as finance dashboard for small companies. InkBoard answers the questions: what is our current financial situation in a company? Has easy to use interface and good navigaton. Several tabs for different aspects of a company.
+                        </p>
+                      </div>
+                    </div>
+                    <div class="row eye-row">
+                      <div class="col">
+                        <a class="button" href="https://www.behance.net/gallery/67579907/InkBoard-dashboards-for-company-" target="_blank">
+                      <span class="open-eye">
+                        <svg viewBox="0 0 297 193.47"><defs><style>.cls-1{fill:#fff;}</style></defs><title>open-eye</title><g id="Layer_2" data-name="Layer 2"><g id="Capa_1" data-name="Capa 1"><path class="cls-1" d="M295.66,108.89a10.63,10.63,0,0,0-.75-1.18c-.14-.18-1.1-1.45-2.84-3.51l0,0-.63-.74-.14-.16-.57-.67-.22-.24c-.18-.22-.37-.43-.57-.66l-.26-.29-.61-.68-.27-.31-.7-.78-.24-.26-1-1.06,0,0-1.08-1.15-.27-.29-.85-.89-.41-.43c-.26-.27-.52-.53-.78-.81s-.32-.31-.47-.47l-.79-.8c-.17-.17-.34-.35-.52-.52s-.53-.54-.81-.81l-.53-.52-.91-.89-.49-.48-1.17-1.11-.3-.28-1.52-1.43-.45-.41-1.12-1-.63-.56-1-.92-.69-.61-1-.9-.73-.63-1-.9-.75-.64-1.13-1-.73-.6-1.35-1.11-.56-.45-.05-.05,14-28a10.46,10.46,0,0,0-18.71-9.35L247.51,65.15l-.07,0q-3.91-2.56-7.91-4.92l-.25-.15c-1.2-.71-2.41-1.4-3.63-2.08l-.54-.3c-1.23-.69-2.47-1.36-3.72-2l-.18-.1c-2.65-1.39-5.31-2.72-8-4l-.76-.35c-1.07-.5-2.15-1-3.23-1.47l-.85-.37c-1.23-.54-2.47-1.06-3.71-1.57l-.17-.08L226.88,23a10.46,10.46,0,0,0-18.71-9.36L194.54,40.89c-2.87-.8-5.76-1.53-8.65-2.18l-.45-.1c-1.25-.28-2.51-.54-3.76-.79l-.66-.13c-2.82-.56-5.64-1-8.48-1.45l-.6-.08c-1.17-.16-2.33-.31-3.5-.45l-1.11-.13c-1.06-.12-2.13-.23-3.2-.33-.33,0-.66-.07-1-.09-1.39-.13-2.78-.23-4.17-.32V10.46a10.46,10.46,0,0,0-20.92,0V34.84c-1.39.09-2.78.19-4.16.32l-1,.09-3.18.33-1.12.13-3.48.45-.62.08c-1.44.21-2.87.43-4.3.68h0c-1.38.24-2.76.49-4.14.76l-.69.14c-1.23.25-2.47.51-3.7.78l-.51.11q-4.34,1-8.62,2.18h0L88.83,13.62A10.46,10.46,0,0,0,70.13,23L82.5,47.73l-.06,0c-1.29.53-2.57,1.07-3.85,1.63l-.78.34q-1.65.74-3.3,1.5l-.71.33q-4,1.89-8,4l-.17.09c-1.25.66-2.49,1.34-3.74,2l-.53.3c-1.21.68-2.42,1.37-3.63,2.08l-.25.15q-4,2.36-7.9,4.91l-.07.05L37.07,40.29a10.46,10.46,0,1,0-18.71,9.35l14,28-.06.05-.52.43-1.38,1.12-.75.63-1.09.92-.8.67-1,.85L26,83l-.92.81-.79.7-.89.79L22.6,86l-.9.83-.68.62-1.45,1.36-.64.62-.81.77-.68.66-.72.7-.66.65c-.23.23-.46.45-.68.68l-.63.63-.65.66-.59.6-.66.68-.51.53-.71.74c-.13.15-.27.3-.41.44l-1,1.11-.18.2-.83.9-.29.32-.65.72-.29.33-.6.67-.25.28-.6.69-.18.2-.66.77,0,0c-2.17,2.54-3.36,4.11-3.52,4.32a10.45,10.45,0,0,0,0,12.55A172.44,172.44,0,0,0,22.8,142.18,219.26,219.26,0,0,0,41,157,204.72,204.72,0,0,0,61.86,170.3a186.81,186.81,0,0,0,37.94,16h0q8.19,2.41,16.51,4c.63.13,1.27.24,1.91.36a169,169,0,0,0,30.26,2.75h0a168.8,168.8,0,0,0,28-2.35c1.15-.19,2.31-.4,3.47-.62,3.19-.6,6.36-1.3,9.53-2.08l1.55-.4A191.94,191.94,0,0,0,256,157c1.85-1.35,3.63-2.7,5.36-4a211.84,211.84,0,0,0,27.28-25.23c3.9-4.34,6-7.14,6.24-7.43A10.45,10.45,0,0,0,295.66,108.89Zm-24.28,6.7a191.25,191.25,0,0,1-14.21,13.73c-4.11,3.59-8.79,7.36-14,11.13l-.23.16c-1,.69-1.93,1.37-2.89,2l-1.07.73-2.14,1.44-1.15.76c-.73.48-1.46.95-2.2,1.41l-1,.64q-1.5.93-3,1.83l-.19.12c-1.11.66-2.23,1.31-3.34,1.95l-.57.31c-.91.52-1.83,1-2.75,1.52l-.81.43-2.64,1.38-.72.38-3.18,1.56-.11.06a79.23,79.23,0,0,0,0-86.36l.19.09c1,.49,2,1,3.06,1.51l.83.43,2.5,1.3.94.51q1.28.69,2.55,1.41l.75.42c1.09.62,2.18,1.25,3.26,1.9l.48.29c.91.54,1.8,1.09,2.7,1.65l1.15.73,2,1.31,1.27.84c.66.43,1.31.88,2,1.32l1.22.84c.84.58,1.68,1.18,2.51,1.77l.57.4A193.59,193.59,0,0,1,272.85,114Zm-122.88,57h-.06a58.57,58.57,0,1,1,.13,0ZM77.89,155.22c-.92-.47-1.84-1-2.76-1.45l-.74-.39q-1.41-.76-2.82-1.56l-.51-.29c-1.13-.64-2.26-1.29-3.38-2l-.06,0c-1.05-.63-2.1-1.27-3.14-1.92l-.89-.57q-1.17-.73-2.34-1.5l-1-.68c-.78-.51-1.56-1-2.33-1.57l-.89-.6c-1.06-.74-2.12-1.48-3.18-2.24A194.13,194.13,0,0,1,24.15,114c.32-.35.65-.72,1-1.09l.47-.51.5-.53.8-.85.08-.08a191.89,191.89,0,0,1,54.74-40,79.2,79.2,0,0,0,.09,86.23c-1.12-.54-2.24-1.09-3.35-1.65Z"/><circle class="cls-1" cx="148.5" cy="113.99" r="17.26"/></g></g></svg>
+                      </span>
+                          <span class="close-eye">
+                        <svg viewBox="0 0 296.93 129.5"><defs><style>.cls-1{fill:#fff;}</style></defs><title>closed-eye</title><g id="Layer_2" data-name="Layer 2"><g id="Capa_1" data-name="Capa 1"><g id="Layer_2-2" data-name="Layer 2"><g id="Capa_1-2" data-name="Capa 1"><path class="cls-1" d="M287.68.73c-5,5.5-30.6,31.2-44.5,41.3-29.5,21.3-61.4,32.1-94.7,32.1S83.28,63.33,53.78,42C39.88,32,14.18,7,9.88,3,5.78-.8-2.22,16.5.58,20.3A211.13,211.13,0,0,0,32.28,52l-14,28a10.38,10.38,0,0,0,4.6,13.94L23,94a9.85,9.85,0,0,0,4.7,1.1,10.55,10.55,0,0,0,9.4-5.8L49.5,64.4a189.72,189.72,0,0,0,33,17.4L70.1,106.6a10.38,10.38,0,0,0,4.59,13.94l.11.06a9.85,9.85,0,0,0,4.7,1.1,10.55,10.55,0,0,0,9.4-5.8l13.6-27.3a167.22,167.22,0,0,0,35.6,6V119a10.5,10.5,0,1,0,21,0h0V94.63a173.2,173.2,0,0,0,35.6-6l13.6,27.3a10.36,10.36,0,0,0,9.4,5.8,11.1,11.1,0,0,0,4.7-1.1,10.41,10.41,0,0,0,4.73-13.94l0-.06-12.4-24.8a196.48,196.48,0,0,0,33-17.4l12.4,24.9a10.36,10.36,0,0,0,9.4,5.8,11.1,11.1,0,0,0,4.7-1.1,10.41,10.41,0,0,0,4.73-13.94l0-.06-14-28a197.83,197.83,0,0,0,31.5-32C298.88,16.23,292-4.07,287.68.73Z"/></g></g></g></g></svg>
+                      </span>
+                          View
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-sm-8 offset-sm-2 col-md-8 offset-md-2 offset-lg-0 col-lg-7 photo-work">
+                    <img class="img-fluid" src="images/InkBoard-screen.png" width="100%" height="auto" />
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="row">
+                  <div class="col-sm-10 col-md-10 offset-sm-1 col-lg-5 offset-lg-0 work-text">
+                    <div class="row our-work-content">
+                      <div class="col">
+                        <h4>E-commerce website design</h4>
+                        <p>
+                          We have been asked to make UX research and improve UI design of the website. Our research showed that the target audience is satisfied with current designs and most of the things required were improvements to form validation, little improvements to information architecture. Our research saved a lot of money for a company. After we did just little improvements on UI parts which were not significant in comparison to total website redesign. More info you can read on feedback left on Clutch named "UI/UX Audit for Marketing Department".
+                        </p>
+                      </div>
+                    </div>
+                    <div class="row eye-row">
+                      <div class="col">
+                        <a class="button" href="http://e-server.com.ua/" target="_blank">
+                      <span class="open-eye">
+                        <svg viewBox="0 0 297 193.47"><defs><style>.cls-1{fill:#fff;}</style></defs><title>open-eye</title><g id="Layer_2" data-name="Layer 2"><g id="Capa_1" data-name="Capa 1"><path class="cls-1" d="M295.66,108.89a10.63,10.63,0,0,0-.75-1.18c-.14-.18-1.1-1.45-2.84-3.51l0,0-.63-.74-.14-.16-.57-.67-.22-.24c-.18-.22-.37-.43-.57-.66l-.26-.29-.61-.68-.27-.31-.7-.78-.24-.26-1-1.06,0,0-1.08-1.15-.27-.29-.85-.89-.41-.43c-.26-.27-.52-.53-.78-.81s-.32-.31-.47-.47l-.79-.8c-.17-.17-.34-.35-.52-.52s-.53-.54-.81-.81l-.53-.52-.91-.89-.49-.48-1.17-1.11-.3-.28-1.52-1.43-.45-.41-1.12-1-.63-.56-1-.92-.69-.61-1-.9-.73-.63-1-.9-.75-.64-1.13-1-.73-.6-1.35-1.11-.56-.45-.05-.05,14-28a10.46,10.46,0,0,0-18.71-9.35L247.51,65.15l-.07,0q-3.91-2.56-7.91-4.92l-.25-.15c-1.2-.71-2.41-1.4-3.63-2.08l-.54-.3c-1.23-.69-2.47-1.36-3.72-2l-.18-.1c-2.65-1.39-5.31-2.72-8-4l-.76-.35c-1.07-.5-2.15-1-3.23-1.47l-.85-.37c-1.23-.54-2.47-1.06-3.71-1.57l-.17-.08L226.88,23a10.46,10.46,0,0,0-18.71-9.36L194.54,40.89c-2.87-.8-5.76-1.53-8.65-2.18l-.45-.1c-1.25-.28-2.51-.54-3.76-.79l-.66-.13c-2.82-.56-5.64-1-8.48-1.45l-.6-.08c-1.17-.16-2.33-.31-3.5-.45l-1.11-.13c-1.06-.12-2.13-.23-3.2-.33-.33,0-.66-.07-1-.09-1.39-.13-2.78-.23-4.17-.32V10.46a10.46,10.46,0,0,0-20.92,0V34.84c-1.39.09-2.78.19-4.16.32l-1,.09-3.18.33-1.12.13-3.48.45-.62.08c-1.44.21-2.87.43-4.3.68h0c-1.38.24-2.76.49-4.14.76l-.69.14c-1.23.25-2.47.51-3.7.78l-.51.11q-4.34,1-8.62,2.18h0L88.83,13.62A10.46,10.46,0,0,0,70.13,23L82.5,47.73l-.06,0c-1.29.53-2.57,1.07-3.85,1.63l-.78.34q-1.65.74-3.3,1.5l-.71.33q-4,1.89-8,4l-.17.09c-1.25.66-2.49,1.34-3.74,2l-.53.3c-1.21.68-2.42,1.37-3.63,2.08l-.25.15q-4,2.36-7.9,4.91l-.07.05L37.07,40.29a10.46,10.46,0,1,0-18.71,9.35l14,28-.06.05-.52.43-1.38,1.12-.75.63-1.09.92-.8.67-1,.85L26,83l-.92.81-.79.7-.89.79L22.6,86l-.9.83-.68.62-1.45,1.36-.64.62-.81.77-.68.66-.72.7-.66.65c-.23.23-.46.45-.68.68l-.63.63-.65.66-.59.6-.66.68-.51.53-.71.74c-.13.15-.27.3-.41.44l-1,1.11-.18.2-.83.9-.29.32-.65.72-.29.33-.6.67-.25.28-.6.69-.18.2-.66.77,0,0c-2.17,2.54-3.36,4.11-3.52,4.32a10.45,10.45,0,0,0,0,12.55A172.44,172.44,0,0,0,22.8,142.18,219.26,219.26,0,0,0,41,157,204.72,204.72,0,0,0,61.86,170.3a186.81,186.81,0,0,0,37.94,16h0q8.19,2.41,16.51,4c.63.13,1.27.24,1.91.36a169,169,0,0,0,30.26,2.75h0a168.8,168.8,0,0,0,28-2.35c1.15-.19,2.31-.4,3.47-.62,3.19-.6,6.36-1.3,9.53-2.08l1.55-.4A191.94,191.94,0,0,0,256,157c1.85-1.35,3.63-2.7,5.36-4a211.84,211.84,0,0,0,27.28-25.23c3.9-4.34,6-7.14,6.24-7.43A10.45,10.45,0,0,0,295.66,108.89Zm-24.28,6.7a191.25,191.25,0,0,1-14.21,13.73c-4.11,3.59-8.79,7.36-14,11.13l-.23.16c-1,.69-1.93,1.37-2.89,2l-1.07.73-2.14,1.44-1.15.76c-.73.48-1.46.95-2.2,1.41l-1,.64q-1.5.93-3,1.83l-.19.12c-1.11.66-2.23,1.31-3.34,1.95l-.57.31c-.91.52-1.83,1-2.75,1.52l-.81.43-2.64,1.38-.72.38-3.18,1.56-.11.06a79.23,79.23,0,0,0,0-86.36l.19.09c1,.49,2,1,3.06,1.51l.83.43,2.5,1.3.94.51q1.28.69,2.55,1.41l.75.42c1.09.62,2.18,1.25,3.26,1.9l.48.29c.91.54,1.8,1.09,2.7,1.65l1.15.73,2,1.31,1.27.84c.66.43,1.31.88,2,1.32l1.22.84c.84.58,1.68,1.18,2.51,1.77l.57.4A193.59,193.59,0,0,1,272.85,114Zm-122.88,57h-.06a58.57,58.57,0,1,1,.13,0ZM77.89,155.22c-.92-.47-1.84-1-2.76-1.45l-.74-.39q-1.41-.76-2.82-1.56l-.51-.29c-1.13-.64-2.26-1.29-3.38-2l-.06,0c-1.05-.63-2.1-1.27-3.14-1.92l-.89-.57q-1.17-.73-2.34-1.5l-1-.68c-.78-.51-1.56-1-2.33-1.57l-.89-.6c-1.06-.74-2.12-1.48-3.18-2.24A194.13,194.13,0,0,1,24.15,114c.32-.35.65-.72,1-1.09l.47-.51.5-.53.8-.85.08-.08a191.89,191.89,0,0,1,54.74-40,79.2,79.2,0,0,0,.09,86.23c-1.12-.54-2.24-1.09-3.35-1.65Z"/><circle class="cls-1" cx="148.5" cy="113.99" r="17.26"/></g></g></svg>
+                      </span>
+                          <span class="close-eye">
+                        <svg viewBox="0 0 296.93 129.5"><defs><style>.cls-1{fill:#fff;}</style></defs><title>closed-eye</title><g id="Layer_2" data-name="Layer 2"><g id="Capa_1" data-name="Capa 1"><g id="Layer_2-2" data-name="Layer 2"><g id="Capa_1-2" data-name="Capa 1"><path class="cls-1" d="M287.68.73c-5,5.5-30.6,31.2-44.5,41.3-29.5,21.3-61.4,32.1-94.7,32.1S83.28,63.33,53.78,42C39.88,32,14.18,7,9.88,3,5.78-.8-2.22,16.5.58,20.3A211.13,211.13,0,0,0,32.28,52l-14,28a10.38,10.38,0,0,0,4.6,13.94L23,94a9.85,9.85,0,0,0,4.7,1.1,10.55,10.55,0,0,0,9.4-5.8L49.5,64.4a189.72,189.72,0,0,0,33,17.4L70.1,106.6a10.38,10.38,0,0,0,4.59,13.94l.11.06a9.85,9.85,0,0,0,4.7,1.1,10.55,10.55,0,0,0,9.4-5.8l13.6-27.3a167.22,167.22,0,0,0,35.6,6V119a10.5,10.5,0,1,0,21,0h0V94.63a173.2,173.2,0,0,0,35.6-6l13.6,27.3a10.36,10.36,0,0,0,9.4,5.8,11.1,11.1,0,0,0,4.7-1.1,10.41,10.41,0,0,0,4.73-13.94l0-.06-12.4-24.8a196.48,196.48,0,0,0,33-17.4l12.4,24.9a10.36,10.36,0,0,0,9.4,5.8,11.1,11.1,0,0,0,4.7-1.1,10.41,10.41,0,0,0,4.73-13.94l0-.06-14-28a197.83,197.83,0,0,0,31.5-32C298.88,16.23,292-4.07,287.68.73Z"/></g></g></g></g></svg>
+                      </span>
+                          View
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-sm-8 offset-sm-2 col-md-8 offset-md-2 offset-lg-0 col-lg-7 photo-work">
+                    <img class="img-fluid" src="images/E-server-screen.png" width="100%" height="auto" />
                   </div>
                 </div>
               </div>
@@ -347,33 +516,6 @@
                   <div class="col-md-8 offset-md-2 col-lg-10 offset-lg-1">
                     <div class="row photo">
                       <div class="col">
-                        <img class="circular--square" src="images/sergei.jpg">
-                      </div>
-                    </div>
-                    <div class="row name">
-                      <div class="col">
-                        Sergei
-                      </div>
-                    </div>
-                    <div class="row position">
-                      <div class="col">
-                        Founder of <span class="green-text">EServer</span>
-                      </div>
-                    </div>
-                    <div class="row testimonial-descr">
-                      <div class="col-10 offset-1 col-sm-10 offset-sm-1 col-md-10 offset-md-1">
-                        Nice experience working with AndyAndUX. They delivered in time and spent all the time
-                        needed to understand the project and improve UI/UX of my e-commerce business. Highly recommended!
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="swiper-slide">
-                <div class="row text-center">
-                  <div class="col-md-8 offset-md-2 col-lg-10 offset-lg-1">
-                    <div class="row photo">
-                      <div class="col">
                         <img class="circular--square" src="images/roopesh.jpg">
                       </div>
                     </div>
@@ -397,15 +539,42 @@
                   </div>
                 </div>
               </div>
+              <div class="swiper-slide">
+                <div class="row text-center">
+                  <div class="col-md-8 offset-md-2 col-lg-10 offset-lg-1">
+                    <div class="row photo">
+                      <div class="col">
+                        <img class="circular--square" src="images/sergei.jpg">
+                      </div>
+                    </div>
+                    <div class="row name">
+                      <div class="col">
+                        Sergei
+                      </div>
+                    </div>
+                    <div class="row position">
+                      <div class="col">
+                        Founder of <span class="green-text">EServer</span>
+                      </div>
+                    </div>
+                    <div class="row testimonial-descr">
+                      <div class="col-10 offset-1 col-sm-10 offset-sm-1 col-md-10 offset-md-1">
+                        Nice experience working with AndyAndUX. They delivered in time and spent all the time
+                        needed to understand the project and improve UI/UX of my e-commerce business. Highly recommended!
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
             <!-- If we need pagination -->
             <div class="swiper-pagination swiper-pagination-testimonials"></div>
 
             <!-- If we need navigation buttons -->
-            <div class="swiper-button-next swiper-button-next-testimonials nav">
+            <div class="swiper-button-next swiper-button-next-testimonials nav background-override">
               <i class="material-icons">keyboard_arrow_right</i>
             </div>
-            <div class="swiper-button-prev swiper-button-prev-testimonials nav">
+            <div class="swiper-button-prev swiper-button-prev-testimonials nav background-override">
               <i class="material-icons">keyboard_arrow_left</i>
             </div>
           </div>
@@ -454,20 +623,48 @@
             </button>
           </div>
         </div>
-      </div>
+      </div> <!-- Container-->
     </div>
     <div class="footer">
       <div class="container">
-        <div class="row justify-content-center">
-          <div class="col">
-            <p>© AndyAndUX, 2018. All rights reserved.</p>
+       <div class="row justify-content-start">
+         <div class="col-md-2 col-sm-6 text-center social-block">
+            <p>We are in socials:</p>
+              <a href="">
+                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Capa_1" x="0px" y="0px" width="16px" height="16px" viewBox="0 0 430.113 430.114" style="enable-background:new 0 0 430.113 430.114;" xml:space="preserve">
+                <g>
+                  <path id="Facebook" d="M158.081,83.3c0,10.839,0,59.218,0,59.218h-43.385v72.412h43.385v215.183h89.122V214.936h59.805   c0,0,5.601-34.721,8.316-72.685c-7.784,0-67.784,0-67.784,0s0-42.127,0-49.511c0-7.4,9.717-17.354,19.321-17.354   c9.586,0,29.818,0,48.557,0c0-9.859,0-43.924,0-75.385c-25.016,0-53.476,0-66.021,0C155.878-0.004,158.081,72.48,158.081,83.3z" fill="#FFFFFF"/>
+                </g>
+                </svg>
+              </a>
+              <a href="">
+                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Capa_1" x="0px" y="0px" width="16px" height="16px" viewBox="0 0 430.117 430.117" style="enable-background:new 0 0 430.117 430.117;" xml:space="preserve">
+                <g>
+                  <path id="Twitter__x28_alt_x29_" d="M381.384,198.639c24.157-1.993,40.543-12.975,46.849-27.876   c-8.714,5.353-35.764,11.189-50.703,5.631c-0.732-3.51-1.55-6.844-2.353-9.854c-11.383-41.798-50.357-75.472-91.194-71.404   c3.304-1.334,6.655-2.576,9.996-3.691c4.495-1.61,30.868-5.901,26.715-15.21c-3.5-8.188-35.722,6.188-41.789,8.067   c8.009-3.012,21.254-8.193,22.673-17.396c-12.27,1.683-24.315,7.484-33.622,15.919c3.36-3.617,5.909-8.025,6.45-12.769   C241.68,90.963,222.563,133.113,207.092,174c-12.148-11.773-22.915-21.044-32.574-26.192   c-27.097-14.531-59.496-29.692-110.355-48.572c-1.561,16.827,8.322,39.201,36.8,54.08c-6.17-0.826-17.453,1.017-26.477,3.178   c3.675,19.277,15.677,35.159,48.169,42.839c-14.849,0.98-22.523,4.359-29.478,11.642c6.763,13.407,23.266,29.186,52.953,25.947   c-33.006,14.226-13.458,40.571,13.399,36.642C113.713,320.887,41.479,317.409,0,277.828   c108.299,147.572,343.716,87.274,378.799-54.866c26.285,0.224,41.737-9.105,51.318-19.39   C414.973,206.142,393.023,203.486,381.384,198.639z" fill="#FFFFFF"/>
+                </g>
+                </svg>
+
+              </a>
           </div>
-          <div class="col text-right">
-            <p></p>
+          <div class="col-md-10 col-sm-6 rights-protection text-right footer-contact-block">            
+            <p>Phone: <a href="tel:+380632223322">+38 (063) 222 33 22</a></p>
+            <p>E-mail: <a href="mailto:support@andyux.com">support@andyux.com</a></p>
+          </div>
+       </div>
+        <div class="row justify-content-start">
+          
+          <div class="col">
+            <div class="clutch-widget" data-url="https://clutch.co" data-widget-type="2" data-height="90" data-clutchcompany-id="33683"></div>
+          </div>
+          <div class="col rights-protection text-right copyright">            
+            <p>© AndyAndUX, 2018. All rights reserved.</p>
           </div>
         </div>
       </div>
     </div>
+    
+    <!-- Clutch widget -->
+    <script type="text/javascript" src="https://static1.clutch.co/sites/all/modules/custom/clutch_widget/js/widget.js"></script>
 
     <!-- build:js scripts/main.min.js -->
     <script src="scripts/main.min.js"></script>
